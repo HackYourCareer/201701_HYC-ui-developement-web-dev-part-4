@@ -1,0 +1,37 @@
+{
+  "name": "From zero to Web Developer Hero - part 1",
+  "description": "Source code from \"From zero to Web Developer Hero - part 1\" lecture.",
+  "main": "index.html",
+  "authors": [
+    "Hadyk Alan <alan.hadyk@sap.com>",
+    "Przezorski Łukasz <lukasz.przezorski@sap.com>",
+    "Domagała Sebastian <sebastian.domagala@sap.com>",
+    "Kupczyński Kamil <kamil.kupczynski@sap.com>",
+    "Hadija Ivijan <ivijan.hadija@sap.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "from",
+    "zero",
+    "to",
+    "web",
+    "developer",
+    "hero",
+    "css",
+    "sass",
+    "html",
+    "javascript",
+    "jquery"
+  ],
+  "homepage": "https://github.com/SAPHybrisGliwice/from-zero-to-web-developer-hero-part-1",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}

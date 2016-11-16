@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "init": "yarn && bower install",
+    "compile": "gulp sass",
+    "watch": "gulp sass:watch"
+  }
+}

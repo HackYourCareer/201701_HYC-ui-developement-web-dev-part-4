@@ -1,0 +1,36 @@
+@import './1-tools/variables';
+
+/* _____ BASIC STYLES _____ */
+
+// This file contains generic rules and the basic styling.
+// Don't use IDs or classes here (pseudoclasses are allowed).
+
+body,
+html {
+    position: relative;
+}
+
+html {
+    font: {
+        size: 62.5%;
+    }
+}
+
+body {
+    & * {
+        -webkit-text-size-adjust: none;
+    }
+}
+
+// Style text selection foreground and background color
+*::selection {
+    /* WebKit/Blink Browsers */
+    background: blue;
+    color     : #fff;
+}
+
+*::-moz-selection {
+    /* Gecko Browsers */
+    background: blue;
+    color     : #fff;
+}

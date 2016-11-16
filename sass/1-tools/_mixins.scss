@@ -1,0 +1,47 @@
+@import '../bourbon/bourbon';
+
+/* _____ MIXINS _____ */
+
+// Font smoothing
+@mixin font-smoothing($value: antialiased) {
+   @if $value == antialiased{
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @else {
+    -webkit-font-smoothing : subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+// Flex container
+@mixin flex-container($align: center, $justify: center, $direction: row, $wrapping: wrap) {
+  display: flex;
+  @include align-items($align);
+  @include justify-content($justify);
+  @include flex-flow($direction $wrapping);
+}
+
+// Flex container child
+@mixin flex-container-child($flex: 1 0 100%) {
+   @include flex($flex);
+}
+
+// Input placeholder
+@mixin input-placeholder {
+  ::-webkit-input-placeholder {
+    @content
+  }
+
+  :-moz-placeholder {
+    @content
+  }
+
+  ::-moz-placeholder {
+    @content
+  }
+
+  :-ms-input-placeholder {
+    @content
+  }
+}

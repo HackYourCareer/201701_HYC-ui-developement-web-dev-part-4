@@ -1,0 +1,14 @@
+@import './1-tools/variables';
+
+/* _____ ANCHORS _____ */
+
+a {
+    cursor         : pointer;
+    text-decoration: none;
+
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}

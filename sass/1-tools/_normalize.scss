@@ -1,0 +1,70 @@
+/* _____ NORMALIZE _____ */
+
+// This file contains normalize/reset rules (and useful fixes)
+
+body {
+  min-height                : 100%;
+  height                    : 100%;
+  overflow-x                : hidden;
+  overflow-y                : scroll;
+  margin                    : 0;
+  padding                   : 0;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style        : scrollbar;
+  /* Hack to force all relatively and absolutely positioned elements still render while scrolling
+     Note: This is a bug for "-webkit-overflow-scrolling: touch" */
+  @include font-smoothing();
+
+  & > * {
+    @include transform(translateZ(0px));
+  }
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+* {
+  margin : 0;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Better antialiasing for SVG
+svg {
+  ellipse,
+  line,
+  path,
+  polygon,
+  polyline,
+  rect {
+    shape-rendering: geometricprecision;
+  }
+
+  path {
+    @media print {
+      fill: #000 !important;
+    }
+  }
+}
+
+// Hide empty tags
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+ol,
+p,
+ul {
+  &:empty {
+    display: none;
+  }
+}
