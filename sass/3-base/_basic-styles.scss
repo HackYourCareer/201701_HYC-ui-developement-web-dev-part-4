@@ -17,6 +17,10 @@ html {
 }
 
 body {
+    font: {
+        font-family: $font-cabin;
+    }
+
     & * {
         -webkit-text-size-adjust: none;
     }
