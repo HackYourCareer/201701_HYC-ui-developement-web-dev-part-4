@@ -1,0 +1,35 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ BUTTONS _____ */
+
+// Component variables
+
+.a-btn {
+    cursor: pointer;
+
+    &--secondary {
+        background: none;
+        border    : none;
+        @include flex-container(center, center, row, nowrap);
+
+        .a-btn__icon--active {
+            display: none;
+        }
+
+        .a-btn__icon--inactive {
+            display: block;
+        }
+
+        &.a-btn--is-muted,
+        &.a-btn--is-playing {
+            .a-btn__icon--active {
+                display: block;
+            }
+
+            .a-btn__icon--inactive {
+                display: none;
+            }
+        }
+    }
+}

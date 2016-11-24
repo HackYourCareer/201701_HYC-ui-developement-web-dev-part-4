@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+    <link rel="stylesheet" href="bower_components/flexboxgrid/dist/flexboxgrid.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -22,9 +23,9 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <header>
+    <header class="o-header">
         <a href="#" title="ProGamer">
-            <img src="img/logo.svg" alt="ProGamer">
+            <img class="a-logo" src="img/logo.svg" alt="ProGamer">
         </a>
         <nav>
             <ul>
@@ -35,126 +36,160 @@
         </nav>
     </header>
 
-    <section>
-        <video width="50%" controls>
-            <source src="videos/welcome.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h1>ProGamer is the largest existing games database.</h1>
-        <p>
-            Search for anything:
-        </p>
-        <ul>
-            <li>games,</li>
-            <li>genres,</li>
-            <li>franchises,</li>
-            <li>game characters</li>
-        </ul>
-        <p>
-            ...and much more!
-        </p>
-    </section>
-
-    <section>
-
-        <h1>ProGamer Search</h1>
-
-        <nav>
-            <input type="search" placeholder="Search for anything...">
-            <p>
-                Limit results by:
-            </p>
-            <div>
-                <input type="checkbox" id="limit-results--games">
-                <label for="limit-results--games">Games</label>
-                <input type="checkbox" id="limit-results--franchises">
-                <label for="limit-results--franchises">Franchises</label>
-                <input type="checkbox" id="limit-results--characters">
-                <label for="limit-results--franchises">Characters</label>
-                <input type="checkbox" id="limit-results--concepts">
-                <label for="limit-results--concepts">Concepts</label>
-                <input type="checkbox" id="limit-results--objects">
-                <label for="limit-results--objects">Objects</label>
-                <input type="checkbox" id="limit-results--locations">
-                <label for="limit-results--locations">Locations</label>
-                <input type="checkbox" id="limit-results--persons">
-                <label for="limit-results--persons">Persons</label>
-                <input type="checkbox" id="limit-results--companies">
-                <label for="limit-results--companies">Companies</label>
+    <main class="o-content">
+        <section class="row">
+            <div class="col-lg-6">
+                <figure id="js-videoContainer" class="m-player">
+                    <video id="js-video" class="m-player__video" width="100%" controls="true" preload="metadata" poster="img/m-player__video__cover.png">
+                        <source src="videos/ProGamer_Teaser_Trailer.mp4" type="video/mp4" />
+                    </video>
+                    <nav id="js-video-controls" class="m-player__controls m-controls">
+                        <ul class="m-controls__list controls">
+                            <li class="m-controls__item m-controls__item--sm">
+                              <button id="js-playpause" class="a-btn a-btn--secondary" type="button">
+                                <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/play.svg" width="11px" height="13px">
+                                <img class="a-btn__icon a-btn__icon--active" src="img/icons/pause.svg" width="11px" height="13px">
+                              </button>
+                            </li>
+                            <li class="m-controls__item m-controls__item--lg m-controls__item--is-flex progress">
+                                <progress id="js-progress" class="m-controls__subitem m-controls__subitem--lg a-progress" value="0" min="0">
+                               <span id="js-progress-bar"></span>
+                            </progress>
+                            </li>
+                            <li class="m-controls__item m-controls__item--sm">
+                              <button id="js-mute" class="a-btn a-btn--secondary" type="button">
+                                <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/unmuted.svg" width="13px" height="13px">
+                                <img class="a-btn__icon a-btn__icon--active" src="img/icons/muted.svg" width="13px" height="13px">
+                            </button>
+                          </li>
+                            <li class="m-controls__item m-controls__item--sm">
+                              <button id="js-fs" class="a-btn a-btn--secondary" type="button">
+                                <img class="a-btn__icon" src="img/icons/fullscreen.svg" width="13px" height="13px">
+                              </button>
+                            </li>
+                        </ul>
+                    </nav>
+                </figure>
             </div>
-        </nav>
+            <div class="col-lg-6">
+                <h1>ProGamer is the largest existing games database.</h1>
+                <p>
+                    Search for anything:
+                </p>
+                <ul>
+                    <li>games,</li>
+                    <li>genres,</li>
+                    <li>franchises,</li>
+                    <li>game characters</li>
+                </ul>
+                <p>
+                    ...and much more!
+                </p>
+            </div>
+        </section>
 
-        <article>
-            <a href="#" title="John Carmack">
-                <img src="#" width="100%" alt="John Carmack">
-            </a>
-            <header>
-                <p>PERSON</p>
-                <h2><a href="#" title="John Carmack">John Carmack</a></h2>
-            </header>
-            <p>
-                Co-founder of id Software, Carmack is a technical innovator in the video game industry. He is best known for his work in the Wolfenstein, Doom, and Quake franchises. He officially resigned from id in November 2013 to join Oculus VR.
-            </p>
-        </article>
+        <section>
 
-        <article>
-            <a href="#" title="Call of Duty">
-                <img src="#" width="100%" alt="Call of Duty">
-            </a>
-            <header>
-                <p>FRANCHISE</p>
-                <h2><a href="#" title="Call of Duty">Call of Duty</a></h2>
-            </header>
-            <p>
-                Originally starting as a World War II-themed first-person shooter, the Call of Duty franchise now incorporates other time periods and conflicts and can be found on virtually every modern platform.
-            </p>
-        </article>
+            <h1>ProGamer Search</h1>
 
-        <article>
-            <a href="#" title="Command & Conquer: Red Alert 2">
-                <img src="#" width="100%" alt="Command & Conquer: Red Alert 2">
-            </a>
-            <header>
-                <p>GAME</p>
-                <h2><a href="#" title="Command & Conquer: Red Alert 2">Command & Conquer: Red Alert 2</a></h2>
-            </header>
-            <p>
-                Red Alert 2 is the continuation of the Red Alert series and takes place during the surprise Soviet invasion of the United States.
-            </p>
-        </article>
+            <nav>
+                <input type="search" placeholder="Search for anything...">
+                <p>
+                    Limit results by:
+                </p>
+                <div>
+                    <input type="checkbox" id="limit-results--games">
+                    <label for="limit-results--games">Games</label>
+                    <input type="checkbox" id="limit-results--franchises">
+                    <label for="limit-results--franchises">Franchises</label>
+                    <input type="checkbox" id="limit-results--characters">
+                    <label for="limit-results--franchises">Characters</label>
+                    <input type="checkbox" id="limit-results--concepts">
+                    <label for="limit-results--concepts">Concepts</label>
+                    <input type="checkbox" id="limit-results--objects">
+                    <label for="limit-results--objects">Objects</label>
+                    <input type="checkbox" id="limit-results--locations">
+                    <label for="limit-results--locations">Locations</label>
+                    <input type="checkbox" id="limit-results--persons">
+                    <label for="limit-results--persons">Persons</label>
+                    <input type="checkbox" id="limit-results--companies">
+                    <label for="limit-results--companies">Companies</label>
+                </div>
+            </nav>
 
-        <article>
-            <a href="#" title="Geralt of Rivia">
-                <img src="#" width="100%" alt="Geralt of Rivia">
-            </a>
-            <header>
-                <p>CHARACTER</p>
-                <h2><a href="#" title="Geralt of Rivia">Geralt of Rivia</a></h2>
-            </header>
-            <p>
-                The Witcher is the eponymous hero of CD Projekt Red's RPG trilogy. Based on the character of the same name from Sapkowski's novels, he is both a reviled mutant and something of a folklore legend. His job is killing monsters.
-            </p>
-        </article>
+            <article>
+                <a href="#" title="John Carmack">
+                    <img src="#" width="100%" alt="John Carmack">
+                </a>
+                <header>
+                    <p>PERSON</p>
+                    <h2><a href="#" title="John Carmack">John Carmack</a></h2>
+                </header>
+                <p>
+                    Co-founder of id Software, Carmack is a technical innovator in the video game industry. He is best known for his work in the Wolfenstein, Doom, and Quake franchises. He officially resigned from id in November 2013 to join Oculus VR.
+                </p>
+            </article>
 
-    </section>
+            <article>
+                <a href="#" title="Call of Duty">
+                    <img src="#" width="100%" alt="Call of Duty">
+                </a>
+                <header>
+                    <p>FRANCHISE</p>
+                    <h2><a href="#" title="Call of Duty">Call of Duty</a></h2>
+                </header>
+                <p>
+                    Originally starting as a World War II-themed first-person shooter, the Call of Duty franchise now incorporates other time periods and conflicts and can be found on virtually every modern platform.
+                </p>
+            </article>
 
-    <section>
+            <article>
+                <a href="#" title="Command & Conquer: Red Alert 2">
+                    <img src="#" width="100%" alt="Command & Conquer: Red Alert 2">
+                </a>
+                <header>
+                    <p>GAME</p>
+                    <h2><a href="#" title="Command & Conquer: Red Alert 2">Command & Conquer: Red Alert 2</a></h2>
+                </header>
+                <p>
+                    Red Alert 2 is the continuation of the Red Alert series and takes place during the surprise Soviet invasion of the United States.
+                </p>
+            </article>
 
-        <h1>Contact</h1>
+            <article>
+                <a href="#" title="Geralt of Rivia">
+                    <img src="#" width="100%" alt="Geralt of Rivia">
+                </a>
+                <header>
+                    <p>CHARACTER</p>
+                    <h2><a href="#" title="Geralt of Rivia">Geralt of Rivia</a></h2>
+                </header>
+                <p>
+                    The Witcher is the eponymous hero of CD Projekt Red's RPG trilogy. Based on the character of the same name from Sapkowski's novels, he is both a reviled mutant and something of a folklore legend. His job is killing monsters.
+                </p>
+            </article>
 
-        <form id="contact" action="" method="post">
-            <fieldset>
-                <input placeholder="Your e-mail" type="email" tabindex="1" required>
-            </fieldset>
-            <fieldset>
-                <textarea placeholder="Type your message here..." tabindex="2" required></textarea>
-            </fieldset>
-            <fieldset>
-                <button name="submit" type="submit" id="submit" data-submit="...Sending">SEND</button>
-            </fieldset>
-        </form>
+        </section>
 
-    </section>
+        <section>
+
+            <h1>Contact</h1>
+
+            <form id="contact" action="" method="post">
+                <fieldset>
+                    <input placeholder="Your e-mail" type="email" tabindex="1" required>
+                </fieldset>
+                <fieldset>
+                    <textarea placeholder="Type your message here..." tabindex="2" required></textarea>
+                </fieldset>
+                <fieldset>
+                    <button name="submit" type="submit" id="submit" data-submit="...Sending">SEND</button>
+                </fieldset>
+            </form>
+
+        </section>
+
+    </main>
 
     <footer>
         <p>
@@ -166,24 +201,6 @@
 
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-        (function(b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
-                function() {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = '//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-XXXXX-X', 'auto');
-        ga('send', 'pageview');
-    </script>
 </body>
 
 </html>

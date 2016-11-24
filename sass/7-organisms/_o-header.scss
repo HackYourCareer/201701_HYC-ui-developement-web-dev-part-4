@@ -1,0 +1,21 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ HEADER _____ */
+
+// Component variables
+$o-header-background: $color-blue-dark-primary;
+$o-header-box-shadow: $box-shadow-primary;
+$o-header-height: 10rem;
+$o-header-padding: 0 2.5rem;
+$o-header-z-index: 100;
+
+.o-header {
+    background: $o-header-background;
+    box-shadow: $o-header-box-shadow;
+    height    : $o-header-height;
+    padding   : $o-header-padding;
+    z-index   : $o-header-z-index;
+    @include position(fixed, 0, 0, initial, 0);
+    @include flex-container(center, space-between, row, nowrap);
+}

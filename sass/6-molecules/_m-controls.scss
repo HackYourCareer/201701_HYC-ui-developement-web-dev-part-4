@@ -1,0 +1,45 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ LOGO _____ */
+
+// Component variables
+$m-controls-height: 5rem;
+$m-controls-background: $color-blue-dark-primary;
+$m-controls-padding: 0 2.5rem;
+
+$m-controls__item-padding: 0 .625rem;
+
+.m-controls {
+    &__list {
+        height         : $m-controls-height;
+        background     : $m-controls-background;
+        padding        : $m-controls-padding;
+        cursor         : default;
+        list-style-type: none;
+        @include flex-container(center, space-between, row, nowrap);
+    }
+
+    &__item {
+        text-align: center;
+        padding   : $m-controls__item-padding;
+
+        &--sm {
+            @include flex(1 0 5%);
+        }
+
+        &--lg {
+            @include flex(1 0 85%);
+        }
+
+        &--is-flex {
+            @include flex-container(center, center, row, nowrap);
+        }
+    }
+
+    &__subitem {
+        &--lg {
+            @include flex(1 0 100%);
+        }
+    }
+}

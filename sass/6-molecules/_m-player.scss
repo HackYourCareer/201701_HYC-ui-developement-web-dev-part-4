@@ -1,0 +1,37 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ LOGO _____ */
+
+// Component variables
+$m-player-transition: $transition-default;
+
+$m-player__controls-transition: $transition-default;
+$m-player__controls-z-index: 200;
+
+.m-player {
+    position  : relative;
+    cursor    : pointer;
+    transition: $m-player-transition;
+
+    &__video {
+        display: block;
+    }
+
+    &__controls {
+        opacity   : 0;
+        visibility: hidden;
+        transition: $m-player__controls-transition;
+        z-index   : $m-player__controls-z-index;
+        @include position(absolute, initial, 0, 0, 0);
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        .m-player__controls {
+            opacity   : 1;
+            visibility: visible;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ PROGRESS _____ */
+
+// Component variables
+$a-progress-height: .9375rem;
+$a-progress-progress-bar-background: $color-white-primary;
+$a-progress-progress-value-background: $color-red-primary;
+
+.a-progress {
+    -webkit-appearance: none;
+    appearance        : none;
+    cursor            : pointer;
+    height            : $a-progress-height;
+
+    &[value]::-webkit-progress-bar {
+        background: $a-progress-progress-bar-background;
+    }
+
+    &[value]::-webkit-progress-value {
+        background: $a-progress-progress-value-background;
+    }
+}

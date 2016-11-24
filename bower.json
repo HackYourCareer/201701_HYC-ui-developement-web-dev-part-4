@@ -1,12 +1,9 @@
 {
-  "name": "From zero to Web Developer Hero - part 1",
-  "description": "Source code from \"From zero to Web Developer Hero - part 1\" lecture.",
+  "name": "UI Development - Web Dev. part 4/4",
+  "description": "Source code from \"UI Development - Web Dev. part 4/4\" lecture.",
   "main": "index.html",
   "authors": [
     "Hadyk Alan <alan.hadyk@sap.com>",
-    "Przezorski Łukasz <lukasz.przezorski@sap.com>",
-    "Domagała Sebastian <sebastian.domagala@sap.com>",
-    "Kupczyński Kamil <kamil.kupczynski@sap.com>",
     "Hadija Ivijan <ivijan.hadija@sap.com>"
   ],
   "license": "MIT",
@@ -32,6 +29,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "flexboxgrid": "^6.3.2"
   }
 }

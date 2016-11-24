@@ -1,0 +1,79 @@
+@import './1-tools/variables';
+
+/* _____ UTILITIES _____ */
+
+// Useful utility classes
+// Required format:
+// .u-utility-name {
+// 	property1: value;
+// 	property2: value;
+// }
+//
+
+// CURSORS 
+//
+// Cursor default
+.u-cursor-default {
+    cursor: default;
+}
+
+// TRANSITIONS
+//
+// All
+.u-transition-all {
+    @include transition($transition-default);
+}
+
+// RESPONSIVENESS
+//
+// Responsive image
+.u-responsive-img {
+    width : 100%;
+    height: auto;
+}
+
+// DISPLAYING
+//
+// Flex container
+.u-flex-container {
+    @media all and (min-width: $screen-sm) {
+         @include display(flex);
+        @include align-items(stretch);
+        @include justify-content(center);
+    }
+    @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+         @include flex-flow(column nowrap);
+    }
+    @media all and (min-width: $screen-md) {
+         @include flex-flow(row nowrap);
+    }
+
+    &__item {
+        &--small {
+            @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+            @media all and (min-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+        }
+
+        &--medium {
+            @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+            @media all and (min-width: $screen-md) {
+                 @include flex(1 0 50%);
+            }
+        }
+
+        &--large {
+            @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+            @media all and (min-width: $screen-md) {
+                 @include flex-grow(1);
+            }
+        }
+    }
+}
