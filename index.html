@@ -35,54 +35,56 @@
     </header>
 
     <main class="o-content">
-        <section id="about" class="row u-jump-target">
-            <div class="col-lg-6 col-md-6 col-sm-6">
-                <figure id="js-videoContainer" class="m-player">
-                    <video id="js-video" class="m-player__video" width="100%" controls="true" preload="metadata" poster="img/m-player__video__cover.png">
-                        <source src="videos/ProGamer_Teaser_Trailer.mp4" type="video/mp4" />
-                    </video>
-                    <nav id="js-video-controls" class="m-player__controls m-controls">
-                        <ul class="m-controls__list controls">
-                            <li class="m-controls__item m-controls__item--sm">
-                                <button id="js-playpause" class="a-btn a-btn--tertiary" type="button">
-                                <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/play.svg" width="11px" height="13px">
-                                <img class="a-btn__icon a-btn__icon--active" src="img/icons/pause.svg" width="11px" height="13px">
+        <section id="about" class="u-jump-target">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <figure id="js-videoContainer" class="m-player">
+                        <video id="js-video" class="m-player__video" width="100%" controls="true" preload="metadata" poster="img/m-player__video__cover.png">
+                          <source src="videos/ProGamer_Teaser_Trailer.mp4" type="video/mp4" />
+                      </video>
+                        <nav id="js-video-controls" class="m-player__controls m-controls">
+                            <ul class="m-controls__list controls">
+                                <li class="m-controls__item m-controls__item--sm">
+                                    <button id="js-playpause" class="a-btn a-btn--tertiary" type="button">
+                                  <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/play.svg" width="11px" height="13px">
+                                  <img class="a-btn__icon a-btn__icon--active" src="img/icons/pause.svg" width="11px" height="13px">
+                                </button>
+                                </li>
+                                <li class="m-controls__item m-controls__item--lg m-controls__item--is-flex progress">
+                                    <progress id="js-progress" class="m-controls__subitem m-controls__subitem--lg a-progress" value="0" min="0">
+                                 <span id="js-progress-bar"></span>
+                              </progress>
+                                </li>
+                                <li class="m-controls__item m-controls__item--sm">
+                                    <button id="js-mute" class="a-btn a-btn--tertiary" type="button">
+                                  <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/unmuted.svg" width="13px" height="13px">
+                                  <img class="a-btn__icon a-btn__icon--active" src="img/icons/muted.svg" width="13px" height="13px">
                               </button>
-                            </li>
-                            <li class="m-controls__item m-controls__item--lg m-controls__item--is-flex progress">
-                                <progress id="js-progress" class="m-controls__subitem m-controls__subitem--lg a-progress" value="0" min="0">
-                               <span id="js-progress-bar"></span>
-                            </progress>
-                            </li>
-                            <li class="m-controls__item m-controls__item--sm">
-                                <button id="js-mute" class="a-btn a-btn--tertiary" type="button">
-                                <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/unmuted.svg" width="13px" height="13px">
-                                <img class="a-btn__icon a-btn__icon--active" src="img/icons/muted.svg" width="13px" height="13px">
-                            </button>
-                            </li>
-                            <li class="m-controls__item m-controls__item--sm">
-                                <button id="js-fs" class="a-btn a-btn--tertiary" type="button">
-                                <img class="a-btn__icon" src="img/icons/fullscreen.svg" width="13px" height="13px">
-                              </button>
-                            </li>
-                        </ul>
-                    </nav>
-                </figure>
-            </div>
-            <div class="m-headline col-lg-6 col-md-6 col-sm-6">
-                <h1 class="a-title a-title--stand-out">ProGamer is the largest existing games database.</h1>
-                <p class="a-paragraph a-paragraph--stand-out">
-                    Search for anything:
-                </p>
-                <ul class="m-list m-list--stand-out">
-                    <li class="m-list__item m-list__item--stand-out">☑ games,</li>
-                    <li class="m-list__item m-list__item--stand-out">☑ genres,</li>
-                    <li class="m-list__item m-list__item--stand-out">☑ franchises,</li>
-                    <li class="m-list__item m-list__item--stand-out">☑ game characters</li>
-                </ul>
-                <p class="a-paragraph a-paragraph--stand-out">
-                    ...and much more!
-                </p>
+                                </li>
+                                <li class="m-controls__item m-controls__item--sm">
+                                    <button id="js-fs" class="a-btn a-btn--tertiary" type="button">
+                                  <img class="a-btn__icon" src="img/icons/fullscreen.svg" width="13px" height="13px">
+                                </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </figure>
+                </div>
+                <div class="m-headline col-lg-6 col-md-6 col-sm-6">
+                    <h1 class="a-title a-title--stand-out">ProGamer is the largest existing games database.</h1>
+                    <p class="a-paragraph a-paragraph--stand-out">
+                        Search for anything:
+                    </p>
+                    <ul class="m-list m-list--stand-out">
+                        <li class="m-list__item m-list__item--stand-out">☑ games,</li>
+                        <li class="m-list__item m-list__item--stand-out">☑ genres,</li>
+                        <li class="m-list__item m-list__item--stand-out">☑ franchises,</li>
+                        <li class="m-list__item m-list__item--stand-out">☑ game characters</li>
+                    </ul>
+                    <p class="a-paragraph a-paragraph--stand-out">
+                        ...and much more!
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -96,22 +98,22 @@
                     Limit results by:
                 </p>
                 <div>
-                    <input type="checkbox" id="limit-results--games">
-                    <label for="limit-results--games">Games</label>
-                    <input type="checkbox" id="limit-results--franchises">
-                    <label for="limit-results--franchises">Franchises</label>
-                    <input type="checkbox" id="limit-results--characters">
-                    <label for="limit-results--franchises">Characters</label>
-                    <input type="checkbox" id="limit-results--concepts">
-                    <label for="limit-results--concepts">Concepts</label>
-                    <input type="checkbox" id="limit-results--objects">
-                    <label for="limit-results--objects">Objects</label>
-                    <input type="checkbox" id="limit-results--locations">
-                    <label for="limit-results--locations">Locations</label>
-                    <input type="checkbox" id="limit-results--persons">
-                    <label for="limit-results--persons">Persons</label>
-                    <input type="checkbox" id="limit-results--companies">
-                    <label for="limit-results--companies">Companies</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--games">
+                    <label class="a-label a-label--primary" for="limit-results--games">Games</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--franchises">
+                    <label class="a-label a-label--primary" for="limit-results--franchises">Franchises</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--characters">
+                    <label class="a-label a-label--primary" for="limit-results--franchises">Characters</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--concepts">
+                    <label class="a-label a-label--primary" for="limit-results--concepts">Concepts</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--objects">
+                    <label class="a-label a-label--primary" for="limit-results--objects">Objects</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--locations">
+                    <label class="a-label a-label--primary" for="limit-results--locations">Locations</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--persons">
+                    <label class="a-label a-label--primary" for="limit-results--persons">Persons</label>
+                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--companies">
+                    <label class="a-label a-label--primary" for="limit-results--companies">Companies</label>
                 </div>
                 <a href="#" class="a-btn a-btn--secondary a-btn--sm">Search</a>
             </nav>
@@ -172,7 +174,7 @@
 
         <section id="contact" class="u-jump-target">
 
-            <h1>Contact</h1>
+            <h1 class="a-title a-title--primary">Contact</h1>
 
             <form id="contact" action="" method="post">
                 <fieldset>

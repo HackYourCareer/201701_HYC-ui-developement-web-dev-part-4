@@ -34,9 +34,8 @@ $a-input--primary-box-shadow-focus: $box-shadow-primary;
             weight: $a-input--primary-font-weight;
         }
         @include input-placeholder {
-            color     : $a-input--primary-text-color !important;
-            opacity   : 1 !important;
-            background: red !important;
+            color  : $a-input--primary-text-color;
+            opacity: 1;
         }
 
         &:active,
