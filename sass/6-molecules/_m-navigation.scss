@@ -1,0 +1,12 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ NAVIGATION _____ */
+
+// Component variables
+
+.m-navigation {
+    &--primary {
+        @include flex-container(center, center, row, nowrap);
+    }
+}

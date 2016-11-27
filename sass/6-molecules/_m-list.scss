@@ -1,0 +1,33 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ LISTS _____ */
+
+// Component variables
+$m-list--stand-out-margin: 0 0 2.5rem;
+
+$m-list__item--stand-out-text-color: $color-blue-dark-primary;
+$m-list__item--stand-out-line-height: 3.2rem;
+$m-list__item--stand-out-font-family: $font-ubuntu;
+$m-list__item--stand-out-font-size: 2.7rem;
+$m-list__item--stand-out-font-weight: 300;
+
+.m-list {
+    &--stand-out {
+        list-style-type: none;
+        margin         : $m-list--stand-out-margin;
+    }
+
+    &__item {
+        &--stand-out {
+            list-style-type: none;
+            color          : $m-list__item--stand-out-text-color;
+            line-height    : $m-list__item--stand-out-line-height;
+            font           : {
+                family: $m-list__item--stand-out-font-family;
+                size  : $m-list__item--stand-out-font-size;
+                weight: $m-list__item--stand-out-font-weight;
+            }
+        }
+    }
+}

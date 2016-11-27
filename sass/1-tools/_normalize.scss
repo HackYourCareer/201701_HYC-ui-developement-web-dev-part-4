@@ -13,12 +13,12 @@ body {
     -ms-overflow-style        : scrollbar;
     /* Hack to force all relatively and absolutely positioned elements still render while scrolling
      Note: This is a bug for "-webkit-overflow-scrolling: touch" */
-    @include font-smoothing();
 
     & > * {
         all                     : initial;
         -webkit-text-size-adjust: none;
         @include transform(translateZ(0px));
+        @include font-smoothing();
     }
 }
 

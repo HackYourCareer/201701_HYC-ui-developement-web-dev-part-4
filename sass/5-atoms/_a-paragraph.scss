@@ -1,0 +1,23 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ PARAGRAPH _____ */
+
+// Component variables
+$a-paragraph--stand-out-text-color: $color-blue-dark-primary;
+$a-paragraph--stand-out-line-height: 3.2rem;
+$a-paragraph--stand-out-font-family: $font-ubuntu;
+$a-paragraph--stand-out-font-size: 2.7rem;
+$a-paragraph--stand-out-font-weight: 300;
+
+.a-paragraph {
+    &--stand-out {
+        color      : $a-paragraph--stand-out-text-color;
+        line-height: $a-paragraph--stand-out-line-height;
+        font       : {
+            family: $a-paragraph--stand-out-font-family;
+            size  : $a-paragraph--stand-out-font-size;
+            weight: $a-paragraph--stand-out-font-weight;
+        }
+    }
+}

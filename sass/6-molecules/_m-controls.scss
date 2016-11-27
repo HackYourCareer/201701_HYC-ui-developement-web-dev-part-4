@@ -9,6 +9,7 @@ $m-controls-background: $color-blue-dark-primary;
 $m-controls-padding: 0 2.5rem;
 
 $m-controls__item-padding: 0 .625rem;
+$m-controls__item-sm-base: 2.5rem;
 
 .m-controls {
     &__list {
@@ -25,7 +26,7 @@ $m-controls__item-padding: 0 .625rem;
         padding   : $m-controls__item-padding;
 
         &--sm {
-            @include flex(1 0 5%);
+            @include flex(0 0 $m-controls__item-sm-base);
         }
 
         &--lg {

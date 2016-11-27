@@ -38,14 +38,13 @@ $(document).ready(function() {
         });
 
         mute.addEventListener('click', function(e) {
-          if (video.muted) {
-            video.muted = false;
-            mute.classList.remove('a-btn--is-muted');
-          }
-          else {
-            video.muted = true;
-            mute.classList.add('a-btn--is-muted');
-          }
+            if (video.muted) {
+                video.muted = false;
+                mute.classList.remove('a-btn--is-muted');
+            } else {
+                video.muted = true;
+                mute.classList.add('a-btn--is-muted');
+            }
         });
 
         video.addEventListener('loadedmetadata', function() {

@@ -10,10 +10,13 @@ $a-progress-progress-value-background: $color-red-primary;
 
 .a-progress {
     -webkit-appearance: none;
-    appearance        : none;
+    -moz-appearance   : none;
     cursor            : pointer;
+    border            : none;
     height            : $a-progress-height;
+    color             : $a-progress-progress-bar-background;
 
+    &[value]::-moz-progress-bar,
     &[value]::-webkit-progress-bar {
         background: $a-progress-progress-bar-background;
     }

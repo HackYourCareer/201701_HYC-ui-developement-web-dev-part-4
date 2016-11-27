@@ -10,7 +10,7 @@
 // }
 //
 
-// CURSORS 
+// CURSORS
 //
 // Cursor default
 .u-cursor-default {
@@ -75,5 +75,19 @@
                  @include flex-grow(1);
             }
         }
+    }
+}
+
+// JUMP TARGET
+$u-jump-target-height: 10rem;
+
+.u-jump-target {
+    &::before {
+        content: '';
+        display: block;
+        height : $u-jump-target-height;
+        /* fixed header height*/
+        margin : -$u-jump-target-height 0 0;
+        /* negative fixed header height */
     }
 }

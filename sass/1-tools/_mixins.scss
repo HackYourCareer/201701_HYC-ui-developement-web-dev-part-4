@@ -21,6 +21,12 @@
     @include justify-content($justify);
     @include flex-flow($direction $wrapping);
 }
+@mixin flex-container-inline($align: center, $justify: center, $direction: row, $wrapping: wrap) {
+    display: inline-flex;
+    @include align-items($align);
+    @include justify-content($justify);
+    @include flex-flow($direction $wrapping);
+}
 
 // Flex container child
 @mixin flex-container-child($flex: 1 0 100%) {
@@ -38,19 +44,27 @@
 
 // Input placeholder
 @mixin input-placeholder {
-    ::-webkit-input-placeholder {
+    &::-webkit-input-placeholder {
         @content
     }
 
-    :-moz-placeholder {
+    &:-moz-placeholder {
         @content
     }
 
-    ::-moz-placeholder {
+    &::-moz-placeholder {
         @content
     }
 
-    :-ms-input-placeholder {
+    &:-ms-input-placeholder {
+        @content
+    }
+
+    &::-ms-placeholder {
+        @content
+    }
+
+    &::placeholder {
         @content
     }
 }

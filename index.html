@@ -27,18 +27,16 @@
         <a href="#" title="ProGamer">
             <img class="a-logo" src="img/logo.svg" alt="ProGamer">
         </a>
-        <nav>
-            <ul>
-                <li><a href="#" title="About">About</a></li>
-                <li><a href="#" title="ProGamer Search">ProGamer Search</a></li>
-                <li><a href="#" title="Contact">Contact</a></li>
-            </ul>
+        <nav class="m-navigation m-navigation--primary">
+            <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#about">About</a>
+            <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#search">Search</a>
+            <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#contact">Contact</a>
         </nav>
     </header>
 
     <main class="o-content">
-        <section class="row">
-            <div class="col-lg-6">
+        <section id="about" class="row u-jump-target">
+            <div class="col-lg-6 col-md-6 col-sm-6">
                 <figure id="js-videoContainer" class="m-player">
                     <video id="js-video" class="m-player__video" width="100%" controls="true" preload="metadata" poster="img/m-player__video__cover.png">
                         <source src="videos/ProGamer_Teaser_Trailer.mp4" type="video/mp4" />
@@ -46,7 +44,7 @@
                     <nav id="js-video-controls" class="m-player__controls m-controls">
                         <ul class="m-controls__list controls">
                             <li class="m-controls__item m-controls__item--sm">
-                              <button id="js-playpause" class="a-btn a-btn--secondary" type="button">
+                                <button id="js-playpause" class="a-btn a-btn--tertiary" type="button">
                                 <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/play.svg" width="11px" height="13px">
                                 <img class="a-btn__icon a-btn__icon--active" src="img/icons/pause.svg" width="11px" height="13px">
                               </button>
@@ -57,13 +55,13 @@
                             </progress>
                             </li>
                             <li class="m-controls__item m-controls__item--sm">
-                              <button id="js-mute" class="a-btn a-btn--secondary" type="button">
+                                <button id="js-mute" class="a-btn a-btn--tertiary" type="button">
                                 <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/unmuted.svg" width="13px" height="13px">
                                 <img class="a-btn__icon a-btn__icon--active" src="img/icons/muted.svg" width="13px" height="13px">
                             </button>
-                          </li>
+                            </li>
                             <li class="m-controls__item m-controls__item--sm">
-                              <button id="js-fs" class="a-btn a-btn--secondary" type="button">
+                                <button id="js-fs" class="a-btn a-btn--tertiary" type="button">
                                 <img class="a-btn__icon" src="img/icons/fullscreen.svg" width="13px" height="13px">
                               </button>
                             </li>
@@ -71,29 +69,29 @@
                     </nav>
                 </figure>
             </div>
-            <div class="col-lg-6">
-                <h1>ProGamer is the largest existing games database.</h1>
-                <p>
+            <div class="m-headline col-lg-6 col-md-6 col-sm-6">
+                <h1 class="a-title a-title--stand-out">ProGamer is the largest existing games database.</h1>
+                <p class="a-paragraph a-paragraph--stand-out">
                     Search for anything:
                 </p>
-                <ul>
-                    <li>games,</li>
-                    <li>genres,</li>
-                    <li>franchises,</li>
-                    <li>game characters</li>
+                <ul class="m-list m-list--stand-out">
+                    <li class="m-list__item m-list__item--stand-out">☑ games,</li>
+                    <li class="m-list__item m-list__item--stand-out">☑ genres,</li>
+                    <li class="m-list__item m-list__item--stand-out">☑ franchises,</li>
+                    <li class="m-list__item m-list__item--stand-out">☑ game characters</li>
                 </ul>
-                <p>
+                <p class="a-paragraph a-paragraph--stand-out">
                     ...and much more!
                 </p>
             </div>
         </section>
 
-        <section>
+        <section id="search" class="u-jump-target">
 
-            <h1>ProGamer Search</h1>
+            <h1 class="a-title a-title--primary">ProGamer Search</h1>
 
-            <nav>
-                <input type="search" placeholder="Search for anything...">
+            <nav class="m-filter">
+                <input class="a-input a-input--primary" type="search" placeholder="Search for anything...">
                 <p>
                     Limit results by:
                 </p>
@@ -115,6 +113,7 @@
                     <input type="checkbox" id="limit-results--companies">
                     <label for="limit-results--companies">Companies</label>
                 </div>
+                <a href="#" class="a-btn a-btn--secondary a-btn--sm">Search</a>
             </nav>
 
             <article>
@@ -171,7 +170,7 @@
 
         </section>
 
-        <section>
+        <section id="contact" class="u-jump-target">
 
             <h1>Contact</h1>
 

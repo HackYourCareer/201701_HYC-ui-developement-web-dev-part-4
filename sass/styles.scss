@@ -35,7 +35,10 @@
   Atoms are basic tags, such as form labels, inputs or buttons. Atoms are abstract; they provide a useful reference and allow you to see all your global styles laid out at a glance.
  */
 @import '5-atoms/a-btn';
+@import '5-atoms/a-input';
+@import '5-atoms/a-paragraph';
 @import '5-atoms/a-progress';
+@import '5-atoms/a-title';
 
 // Molecules
 /*
@@ -43,6 +46,10 @@
   can combine them together to form a search form molecule.
  */
 @import '6-molecules/m-controls';
+@import '6-molecules/m-filter';
+@import '6-molecules/m-headline';
+@import '6-molecules/m-list';
+@import '6-molecules/m-navigation';
 @import '6-molecules/m-player';
 
 // Organisms

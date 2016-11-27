@@ -1,0 +1,48 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ INPUTS _____ */
+
+// Component variables
+$a-input--primary-background-color: $color-white-primary;
+$a-input--primary-background-image: '../img/icons/search.svg';
+$a-input--primary-text-color: $color-blue-primary;
+$a-input--primary-transition: $transition-default;
+$a-input--primary-margin: 0 0 2.5rem;
+$a-input--primary-padding: 0 2.5rem 0 5rem;
+$a-input--primary-height: 5rem;
+$a-input--primary-font-family: $font-ubuntu;
+$a-input--primary-font-size: 1.8rem;
+$a-input--primary-font-weight: 300;
+$a-input--primary-background-focus: #fff;
+$a-input--primary-box-shadow-focus: $box-shadow-primary;
+
+.a-input {
+    &--primary {
+        color     : $a-input--primary-text-color;
+        background: $a-input--primary-background-color url($a-input--primary-background-image) no-repeat 1.25rem center;
+        transition: $a-input--primary-transition;
+        margin    : $a-input--primary-margin;
+        padding   : $a-input--primary-padding;
+        border    : none;
+        height    : $a-input--primary-height;
+        display   : block;
+        width     : 100%;
+        font      : {
+            family: $a-input--primary-font-family;
+            size  : $a-input--primary-font-size;
+            weight: $a-input--primary-font-weight;
+        }
+        @include input-placeholder {
+            color     : $a-input--primary-text-color !important;
+            opacity   : 1 !important;
+            background: red !important;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow      : $a-input--primary-box-shadow-focus;
+            background-color: $a-input--primary-background-focus;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ LOGO _____ */
+
+// Component variables
+$m-headline-padding: 0 0 0 2.5rem;
+
+.m-headline {
+    padding: $m-headline-padding;
+    @include flex-container(flex-start, center, column, wrap);
+}

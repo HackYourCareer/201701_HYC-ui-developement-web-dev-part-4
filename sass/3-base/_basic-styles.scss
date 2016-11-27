@@ -25,12 +25,12 @@ body {
 // Style text selection foreground and background color
 *::selection {
     /* WebKit/Blink Browsers */
-    background: blue;
-    color     : #fff;
+    background: $color-red-primary;
+    color     : $color-white-primary;
 }
 
 *::-moz-selection {
     /* Gecko Browsers */
-    background: blue;
-    color     : #fff;
+    background: $color-red-primary;
+    color     : $color-white-primary;
 }
