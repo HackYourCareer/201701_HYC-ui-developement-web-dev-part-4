@@ -1,0 +1,27 @@
+@import './1-tools/variables';
+@import './1-tools/mixins';
+
+/* _____ LABELS _____ */
+
+// Component variables
+$a-label--primary-text-color: $color-white-primary;
+$a-label--primary-height: 1.4rem;
+$a-label--primary-margin: 0 1.25rem 1.25rem 0;
+$a-label--primary-font-weight: 300;
+$a-label--primary-font-family: $font-ubuntu;
+$a-label--primary-font-size: 1.8rem;
+
+.a-label {
+    &--primary {
+        color : $a-label--primary-text-color;
+        height: $a-label--primary-height;
+        margin: $a-label--primary-margin;
+        cursor: pointer;
+        font  : {
+            weight: $a-label--primary-font-weight;
+            family: $a-label--primary-font-family;
+            size  : $a-label--primary-font-size;
+        }
+        @include flex-container-inline();
+    }
+}

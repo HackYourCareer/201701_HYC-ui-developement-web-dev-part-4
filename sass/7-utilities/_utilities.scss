@@ -78,6 +78,32 @@
     }
 }
 
+// Column system
+.u-columns {
+    @include column-gap(0);
+
+    & * {
+        -webkit-column-break-inside: avoid;
+        page-break-inside          : avoid;
+        break-inside               : avoid;
+    }
+    @media all and (max-width: $screen-xs) {
+         @include columns(20em 1);
+    }
+    @media all and (min-width: $screen-xs) and (max-width: $screen-sm) {
+         @include columns(20em 2);
+    }
+    @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+         @include columns(20em 3);
+    }
+    @media all and (min-width: $screen-md) and (max-width: $screen-lg) {
+         @include columns(20em 4);
+    }
+    @media all and (min-width: $screen-lg) {
+         @include columns(20em 4);
+    }
+}
+
 // JUMP TARGET
 $u-jump-target-height: 10rem;
 

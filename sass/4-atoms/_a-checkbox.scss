@@ -31,7 +31,6 @@ $a-checkbox--primary-after-background: $color-red-primary;
         &:not(:checked) + label {
             position    : relative;
             padding-left: $a-checkbox--primary-checked-label-padding-left;
-            cursor      : pointer;
         }
 
         /* checkbox aspect */

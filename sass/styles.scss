@@ -19,51 +19,43 @@
 // Base
 @import '3-base/basic-styles';
 
-// Quarks
-/*
-  This directory defines the basic building blocks of the website, including paragraphs, tables, images and links.
-  Therefore, this directory should focus only on default HTML elements. These components are called quarks, and they are only basic HTML tags (without classes or IDs).
-*/
-@import '4-quarks/anchors';
-@import '4-quarks/headings';
-@import '4-quarks/lists';
-@import '4-quarks/paragraphs';
-@import '4-quarks/section';
-
 // Atoms
 /*
   Atoms are basic tags, such as form labels, inputs or buttons. Atoms are abstract; they provide a useful reference and allow you to see all your global styles laid out at a glance.
  */
-@import '5-atoms/a-btn';
-@import '5-atoms/a-checkbox';
-@import '5-atoms/a-input';
-@import '5-atoms/a-paragraph';
-@import '5-atoms/a-progress';
-@import '5-atoms/a-title';
+@import '4-atoms/a-btn';
+@import '4-atoms/a-checkbox';
+@import '4-atoms/a-input';
+@import '4-atoms/a-label';
+@import '4-atoms/a-link';
+@import '4-atoms/a-paragraph';
+@import '4-atoms/a-progress';
+@import '4-atoms/a-title';
 
 // Molecules
 /*
   Molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom
   can combine them together to form a search form molecule.
  */
-@import '6-molecules/m-controls';
-@import '6-molecules/m-filter';
-@import '6-molecules/m-headline';
-@import '6-molecules/m-list';
-@import '6-molecules/m-navigation';
-@import '6-molecules/m-player';
+@import '5-molecules/m-controls';
+@import '5-molecules/m-filter';
+@import '5-molecules/m-headline';
+@import '5-molecules/m-item';
+@import '5-molecules/m-list';
+@import '5-molecules/m-navigation';
+@import '5-molecules/m-player';
 
 // Organisms
 /*
   Organisms are groups of molecules (and possibly atoms) joined together to form distinct section of an interface.
   Organisms can consist of similar and/or disparate molecule types. Building up from molecules to organisms encourages creating standalone, portable, reusable components.
  */
-@import '7-organisms/o-content';
-@import '7-organisms/o-header';
+@import '6-organisms/o-content';
+@import '6-organisms/o-header';
 
 // Utilities
 /*
   Utilities should be placed at the end of the stylesheet, because
   they have to overwrite anything else.
  */
-@import '8-utilities/utilities';
+@import '7-utilities/utilities';

@@ -31,9 +31,10 @@ $a-btn--sm-padding: 0 3.75rem;
 $a-btn--sm-height: 3.75rem;
 
 .a-btn {
-    cursor    : pointer;
-    transition: $a-btn-transition;
-    border    : none;
+    cursor         : pointer;
+    transition     : $a-btn-transition;
+    border         : none;
+    text-decoration: none;
 
     &--primary {
         color     : $a-btn--primary-text-color;
@@ -126,5 +127,11 @@ $a-btn--sm-height: 3.75rem;
         font   : {
             size: $a-btn--sm-font-size;
         }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: none;
     }
 }
