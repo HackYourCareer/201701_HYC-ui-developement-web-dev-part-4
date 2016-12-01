@@ -30,7 +30,7 @@ $(document).ready(function() {
                 resourcesTypes = '&resources=game,franchise,character,concept,object,location,person,company'
             }
 
-            const urlAjax = `http://www.giantbomb.com/api/search/?api_key=705119da0da320b8d75b26fcddedbf55aa5e3663&format=jsonp&query="${query}"${resourcesTypes}`;
+            const urlAjax = `https://www.giantbomb.com/api/search/?api_key=705119da0da320b8d75b26fcddedbf55aa5e3663&format=jsonp&query="${query}"${resourcesTypes}`;
             let markup = '';
 
             $.ajax({
