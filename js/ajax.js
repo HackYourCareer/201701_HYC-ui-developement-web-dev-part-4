@@ -3,9 +3,9 @@ $(document).ready(function() {
     $('#js-make-an-ajax-call').on('click', function(event) {
         event.preventDefault();
 
-        const queryValue = $('#js-search-query').val();
+        var queryValue = $('#js-search-query').val();
 
-        let availableResources = '&resources=';
+        var availableResources = '&resources=';
 
         if ($('#limit-results--games')[0].checked) availableResources += 'game,';
         if ($('#limit-results--franchises')[0].checked) availableResources += 'franchise,';
@@ -16,13 +16,34 @@ $(document).ready(function() {
         if ($('#limit-results--persons')[0].checked) availableResources += 'person,';
         if ($('#limit-results--companies')[0].checked) availableResources += 'company,';
 
-        _makeACall(queryValue, availableResources);
+        if (queryValue !== '') _makeACall(queryValue, availableResources);
+    });
+
+    $('#js-search-query').keypress(function(event) {
+
+        if (event.keyCode == 13) {
+
+            var queryValue = $('#js-search-query').val();
+
+            var availableResources = '&resources=';
+
+            if ($('#limit-results--games')[0].checked) availableResources += 'game,';
+            if ($('#limit-results--franchises')[0].checked) availableResources += 'franchise,';
+            if ($('#limit-results--characters')[0].checked) availableResources += 'character,';
+            if ($('#limit-results--concepts')[0].checked) availableResources += 'concept,';
+            if ($('#limit-results--objects')[0].checked) availableResources += 'object,';
+            if ($('#limit-results--locations')[0].checked) availableResources += 'location,';
+            if ($('#limit-results--persons')[0].checked) availableResources += 'person,';
+            if ($('#limit-results--companies')[0].checked) availableResources += 'company,';
+
+            if (queryValue !== '') _makeACall(queryValue, availableResources);
+        }
     });
 
     function _makeACall(query, resources) {
 
         $('#js-loader').fadeIn(300, function() {
-            let resourcesTypes = '';
+            var resourcesTypes = '';
 
             if (resources !== '&resources=') {
                 resourcesTypes = resources;
@@ -30,8 +51,8 @@ $(document).ready(function() {
                 resourcesTypes = '&resources=game,franchise,character,concept,object,location,person,company'
             }
 
-            const urlAjax = `https://www.giantbomb.com/api/search/?api_key=705119da0da320b8d75b26fcddedbf55aa5e3663&format=jsonp&query="${query}"${resourcesTypes}`;
-            let markup = '';
+            var urlAjax = `https://www.giantbomb.com/api/search/?api_key=705119da0da320b8d75b26fcddedbf55aa5e3663&format=jsonp&query="${query}"${resourcesTypes}`;
+            var markup = '';
 
             $.ajax({
                 type: 'GET',
@@ -64,13 +85,13 @@ $(document).ready(function() {
     }
 
     function _createEntry(item) {
-        let result = '';
+        var result = '';
 
         result += `<article class="m-item">
                     <div class="m-item__container">`;
 
         if (item.image) {
-            result += `<a class="m-item__img-container" href="#" title="${item.name}">
+            result += `<a class="m-item__img-container" target="_blank" href="${item.site_detail_url}" title="${item.name}">
                         <img class="m-item__cover" src="${item.image.medium_url}" width="100%" alt="${item.name}">
                     </a>`;
         }
@@ -79,7 +100,7 @@ $(document).ready(function() {
                             <header>
                                 <p class="m-item__type a-paragraph a-paragraph--tertiary">${item.resource_type}</p>
                                 <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="${item.name}">
+                                  <a class="a-link a-link--primary" target="_blank" href="${item.site_detail_url}" title="${item.name}">
                                     <span data-hover="${item.name}" class="a-link__subelement a-link__subelement--primary">${item.name}</span>
                                   </a>
                                 </h2>

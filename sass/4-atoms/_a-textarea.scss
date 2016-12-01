@@ -1,6 +1,7 @@
 /* _____ TEXTAREA _____ */
 
 // Component variables
+$a-textarea--primary-height: 25rem;
 $a-textarea--primary-background-color: #fff;
 $a-textarea--primary-text-color: $color-blue-primary;
 $a-textarea--primary-border-color: $color-blue-light-primary;
@@ -15,11 +16,12 @@ $a-textarea--primary-box-shadow-focus: $box-shadow-tertiary;
 
 .a-textarea {
     display  : block;
-    width    : 100%;
+    width    : 100% !important;
     max-width: 100%;
     min-width: 100%;
 
     &--primary {
+        height    : $a-textarea--primary-height !important;
         color     : $a-textarea--primary-text-color;
         background: $a-textarea--primary-background-color;
         border    : .1rem solid $a-textarea--primary-border-color;
