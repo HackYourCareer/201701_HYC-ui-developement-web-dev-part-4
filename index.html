@@ -93,7 +93,7 @@
             <h1 class="a-title a-title--primary">ProGamer Search</h1>
 
             <nav class="m-filter">
-                <input class="a-input a-input--primary" type="search" placeholder="Search for anything...">
+                <input id="js-search-query" class="a-input a-input--primary" type="search" placeholder="Search for anything...">
                 <p class="a-paragraph a-paragraph--secondary">
                     Limit results by:
                 </p>
@@ -116,180 +116,15 @@
                     <label class="a-label a-label--primary" for="limit-results--companies">Companies</label>
                 </div>
                 <div class="m-filter__btn-container">
-                    <a href="#" class="a-btn a-btn--secondary a-btn--sm">Search</a>
+                    <a href="#" id="js-make-an-ajax-call" class="a-btn a-btn--secondary a-btn--sm">Search</a>
                 </div>
             </nav>
 
-            <div class="u-columns">
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="John Carmack">
-                            <img class="m-item__cover" src="img/placeholders/john-carmack.jpg" width="100%" alt="John Carmack">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Person</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="John Carmack">
-                                    <span data-hover="John Carmack" class="a-link__subelement a-link__subelement--primary">John Carmack</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Co-founder of id Software, Carmack is a technical innovator in the video game industry. He is best known for his work in the Wolfenstein, Doom, and Quake franchises. He officially resigned from id in November 2013 to join Oculus VR.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="Command & Conquer: Red Alert 2">
-                            <img class="m-item__cover" src="img/placeholders/command-conquer.jpg" width="100%" alt="Command & Conquer: Red Alert 2">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Game</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="Command & Conquer: Red Alert 2">
-                                    <span data-hover="Command & Conquer: Red Alert 2" class="a-link__subelement a-link__subelement--primary">Command & Conquer: Red Alert 2</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Red Alert 2 is the continuation of the Red Alert series and takes place during the surprise Soviet invasion of the United States.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="John Carmack">
-                            <img class="m-item__cover" src="img/placeholders/john-carmack.jpg" width="100%" alt="John Carmack">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Person</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="John Carmack">
-                                    <span data-hover="John Carmack" class="a-link__subelement a-link__subelement--primary">John Carmack</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Co-founder of id Software, Carmack is a technical innovator in the video game industry. He is best known for his work in the Wolfenstein, Doom, and Quake franchises. He officially resigned from id in November 2013 to join Oculus VR.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="Command & Conquer: Red Alert 2">
-                            <img class="m-item__cover" src="img/placeholders/command-conquer.jpg" width="100%" alt="Command & Conquer: Red Alert 2">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Game</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="Command & Conquer: Red Alert 2">
-                                    <span data-hover="Command & Conquer: Red Alert 2" class="a-link__subelement a-link__subelement--primary">Command & Conquer: Red Alert 2</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Red Alert 2 is the continuation of the Red Alert series and takes place during the surprise Soviet invasion of the United States.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="John Carmack">
-                            <img class="m-item__cover" src="img/placeholders/john-carmack.jpg" width="100%" alt="John Carmack">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Person</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="John Carmack">
-                                    <span data-hover="John Carmack" class="a-link__subelement a-link__subelement--primary">John Carmack</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Co-founder of id Software, Carmack is a technical innovator in the video game industry. He is best known for his work in the Wolfenstein, Doom, and Quake franchises. He officially resigned from id in November 2013 to join Oculus VR.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="Command & Conquer: Red Alert 2">
-                            <img class="m-item__cover" src="img/placeholders/command-conquer.jpg" width="100%" alt="Command & Conquer: Red Alert 2">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Game</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="Command & Conquer: Red Alert 2">
-                                    <span data-hover="Command & Conquer: Red Alert 2" class="a-link__subelement a-link__subelement--primary">Command & Conquer: Red Alert 2</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Red Alert 2 is the continuation of the Red Alert series and takes place during the surprise Soviet invasion of the United States.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="John Carmack">
-                            <img class="m-item__cover" src="img/placeholders/john-carmack.jpg" width="100%" alt="John Carmack">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Person</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="John Carmack">
-                                    <span data-hover="John Carmack" class="a-link__subelement a-link__subelement--primary">John Carmack</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Co-founder of id Software, Carmack is a technical innovator in the video game industry. He is best known for his work in the Wolfenstein, Doom, and Quake franchises. He officially resigned from id in November 2013 to join Oculus VR.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="m-item">
-                    <div class="m-item__container">
-                        <a class="m-item__img-container" href="#" title="Command & Conquer: Red Alert 2">
-                            <img class="m-item__cover" src="img/placeholders/command-conquer.jpg" width="100%" alt="Command & Conquer: Red Alert 2">
-                        </a>
-                        <div class="m-item__content">
-                            <header>
-                                <p class="m-item__type a-paragraph a-paragraph--tertiary">Game</p>
-                                <h2 class="m-item__title a-title a-title--secondary">
-                                  <a class="a-link a-link--primary" href="#" title="Command & Conquer: Red Alert 2">
-                                    <span data-hover="Command & Conquer: Red Alert 2" class="a-link__subelement a-link__subelement--primary">Command & Conquer: Red Alert 2</span>
-                                  </a>
-                                </h2>
-                            </header>
-                            <p class="m-item__description a-paragraph a-paragraph--primary">
-                                Red Alert 2 is the continuation of the Red Alert series and takes place during the surprise Soviet invasion of the United States.
-                            </p>
-                        </div>
-                    </div>
-                </article>
-
+            <div class="m-items-container">
+                <div id="js-loader" class="a-loader" style="display: none;"></div>
+                <div id="js-search-results" class="u-columns">
+                    <p class="a-paragraph a-paragraph--watermark">Type something into search bar...</p>
+                </div>
             </div>
 
         </section>
@@ -298,15 +133,15 @@
 
             <h1 class="a-title a-title--primary">Contact</h1>
 
-            <form id="contact" action="" method="post">
-                <fieldset>
-                    <input placeholder="Your e-mail" type="email" tabindex="1" required>
+            <form class="m-form" action="" method="post">
+                <fieldset class="m-form__fieldset">
+                    <input class="a-input a-input--secondary" placeholder="Your e-mail" type="email" tabindex="1" required>
                 </fieldset>
-                <fieldset>
-                    <textarea placeholder="Type your message here..." tabindex="2" required></textarea>
+                <fieldset class="m-form__fieldset">
+                    <textarea class="a-textarea a-textarea--primary" placeholder="Type your message here..." tabindex="2" required></textarea>
                 </fieldset>
-                <fieldset>
-                    <button name="submit" type="submit" id="submit" data-submit="...Sending">SEND</button>
+                <fieldset class="m-form__fieldset m-form__fieldset--align-right">
+                    <button class="a-btn a-btn--secondary a-btn--sm" name="submit" type="submit" id="submit" data-submit="...Sending">Send</button>
                 </fieldset>
             </form>
 
@@ -314,17 +149,19 @@
 
     </main>
 
-    <footer>
-        <p>
+    <footer class="o-footer">
+        <p class="a-paragraph a-paragraph--blend">
             Copyright © 2016
         </p>
     </footer>
 
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/animejs/anime.min.js"></script>
+    <script src="bower_components/imagesloaded/imagesloaded.pkgd.min.js"></script>
 
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/tilt.js"></script>
 
 </body>

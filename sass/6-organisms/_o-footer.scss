@@ -1,0 +1,11 @@
+/* _____ FOOTER _____ */
+
+// Component variables
+$o-footer-background: $color-white-primary;
+$o-footer-padding: 2.5rem;
+
+.o-footer {
+    background: $o-footer-background;
+    padding   : $o-footer-padding;
+    display   : block;
+}

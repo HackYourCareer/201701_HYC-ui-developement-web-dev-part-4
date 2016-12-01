@@ -1,6 +1,3 @@
-@import './1-tools/variables';
-@import './1-tools/mixins';
-
 /* _____ INPUTS _____ */
 
 // Component variables
@@ -17,17 +14,31 @@ $a-input--primary-font-weight: 300;
 $a-input--primary-background-focus: #fff;
 $a-input--primary-box-shadow-focus: $box-shadow-primary;
 
+$a-input--secondary-background-color: #fff;
+$a-input--secondary-text-color: $color-blue-primary;
+$a-input--secondary-border-color: $color-blue-light-primary;
+$a-input--secondary-transition: $transition-default;
+$a-input--secondary-margin: 0;
+$a-input--secondary-padding: 0 2.5rem;
+$a-input--secondary-height: 5rem;
+$a-input--secondary-font-family: $font-ubuntu;
+$a-input--secondary-font-size: 1.8rem;
+$a-input--secondary-font-weight: 300;
+$a-input--secondary-background-focus: #fff;
+$a-input--secondary-box-shadow-focus: $box-shadow-tertiary;
+
 .a-input {
+    display: block;
+    width  : 100%;
+
     &--primary {
         color     : $a-input--primary-text-color;
         background: $a-input--primary-background-color url($a-input--primary-background-image) no-repeat 1.25rem center;
         transition: $a-input--primary-transition;
         margin    : $a-input--primary-margin;
         padding   : $a-input--primary-padding;
-        border    : none;
         height    : $a-input--primary-height;
-        display   : block;
-        width     : 100%;
+        border    : none;
         font      : {
             family: $a-input--primary-font-family;
             size  : $a-input--primary-font-size;
@@ -42,6 +53,31 @@ $a-input--primary-box-shadow-focus: $box-shadow-primary;
         &:focus {
             box-shadow      : $a-input--primary-box-shadow-focus;
             background-color: $a-input--primary-background-focus;
+        }
+    }
+
+    &--secondary {
+        color     : $a-input--secondary-text-color;
+        background: $a-input--secondary-background-color;
+        border    : .1rem solid $a-input--secondary-border-color;
+        transition: $a-input--secondary-transition;
+        margin    : $a-input--secondary-margin;
+        padding   : $a-input--secondary-padding;
+        height    : $a-input--secondary-height;
+        font      : {
+            family: $a-input--secondary-font-family;
+            size  : $a-input--secondary-font-size;
+            weight: $a-input--secondary-font-weight;
+        }
+        @include input-placeholder {
+            color  : $a-input--secondary-text-color;
+            opacity: 1;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow      : $a-input--secondary-box-shadow-focus;
+            background-color: $a-input--secondary-background-focus;
         }
     }
 }

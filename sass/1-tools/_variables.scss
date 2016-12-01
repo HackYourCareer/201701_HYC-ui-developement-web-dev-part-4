@@ -3,24 +3,30 @@
 // Fonts
 // ==========================================================================
 
-$font-ubuntu             : 'Ubuntu', sans-serif;
-$font-cabin              : 'Cabin', sans-serif;
+$font-ubuntu               : 'Ubuntu', sans-serif;
+$font-cabin                : 'Cabin', sans-serif;
 
 // Color sets
 // ==========================================================================
 
-$color-blue-dark-primary : #2c3e50;
-$color-blue-primary      : #2980b9;
-$color-blue-light-primary: #3498db;
-$color-white-primary     : #ecf0f1;
-$color-red-primary       : #e74c3c;
+$color-blue-dark-primary   : #2c3e50;
+
+$color-blue-primary        : #2980b9;
+
+$color-blue-light-primary  : #3498db;
+$color-blue-light-secondary: #329ee5;
+
+$color-white-primary       : #ecf0f1;
+
+$color-red-primary         : #e74c3c;
 
 // Box shadows
 // ==========================================================================
 
-$box-shadow-primary      : 0 .6rem .9rem 0 rgba(44, 62, 80, 0.33);
-$box-shadow-secondary    : 0 .3rem .4rem 0 rgba(44, 62, 80, 0.33);
-$box-shadow-large        : 0 3rem 2rem rgba(35,32,39,0.5);
+$box-shadow-primary        : 0 .6rem .9rem 0 rgba(44, 62, 80, 0.33);
+$box-shadow-secondary      : 0 .3rem .4rem 0 rgba(44, 62, 80, 0.33);
+$box-shadow-tertiary       : 0 0 1.188rem .012rem $color-blue-light-secondary;
+$box-shadow-large          : 0 3rem 2rem rgba(35,32,39,0.5);
 
 // Generic values
 // ==========================================================================
@@ -28,29 +34,29 @@ $box-shadow-large        : 0 3rem 2rem rgba(35,32,39,0.5);
 // Transitions
 // ==========================================================================
 
-$transition-default      : all 300ms ease-in-out;
-$transition-fast         : all 100ms ease-in-out;
-$transition-transform    : transform 100ms ease-out;
+$transition-default        : all 300ms ease-in-out;
+$transition-fast           : all 100ms ease-in-out;
+$transition-transform      : transform 100ms ease-out;
 
 // Media queries breakpoints
 // ==========================================================================
 
 // Extra small screen / phone
-$screen-xs               : 480px;
-$screen-xs-min           : $screen-xs;
-$screen-phone            : $screen-xs-min;
+$screen-xs                 : 480px;
+$screen-xs-min             : $screen-xs;
+$screen-phone              : $screen-xs-min;
 
 // Small screen / tablet
-$screen-sm               : 768px;
-$screen-sm-min           : $screen-sm;
-$screen-tablet           : $screen-sm-min;
+$screen-sm                 : 768px;
+$screen-sm-min             : $screen-sm;
+$screen-tablet             : $screen-sm-min;
 
 // Medium screen / desktop
-$screen-md               : 992px;
-$screen-md-min           : $screen-md;
-$screen-desktop          : $screen-md-min;
+$screen-md                 : 992px;
+$screen-md-min             : $screen-md;
+$screen-desktop            : $screen-md-min;
 
 // Large screen / wide desktop
-$screen-lg               : 1200px;
-$screen-lg-min           : $screen-lg;
-$screen-lg-desktop       : $screen-lg-min;
+$screen-lg                 : 1200px;
+$screen-lg-min             : $screen-lg;
+$screen-lg-desktop         : $screen-lg-min;

@@ -66,15 +66,15 @@
                     z: 0
                 },
                 reverseAnimation: {
-                    duration: 1200,
+                    duration: 300,
                     easing: 'easeOutElastic',
                     elasticity: 600
                 }
             },
             title: {
                 translation: {
-                    x: 40,
-                    y: 40,
+                    x: 25,
+                    y: 25,
                     z: 0
                 },
                 rotation: {
@@ -83,43 +83,43 @@
                     z: 0
                 },
                 reverseAnimation: {
-                    duration: 1500,
+                    duration: 600,
                     easing: 'easeOutElastic',
                     elasticity: 600
                 }
             },
             description: {
                 translation: {
-                    x: 30,
-                    y: 30,
+                    x: 15,
+                    y: 15,
                     z: 0
                 },
                 reverseAnimation: {
-                    duration: 1200,
+                    duration: 300,
                     easing: 'easeOutElastic',
                     elasticity: 600
                 }
             },
             type: {
                 translation: {
-                    x: 30,
-                    y: 30,
+                    x: 15,
+                    y: 15,
                     z: 0
                 },
                 reverseAnimation: {
-                    duration: 1200,
+                    duration: 300,
                     easing: 'easeOutElastic',
                     elasticity: 600
                 }
             },
             cover: {
                 translation: {
-                    x: 20,
-                    y: 20,
+                    x: 10,
+                    y: 10,
                     z: 0
                 },
                 reverseAnimation: {
-                    duration: 1200,
+                    duration: 300,
                     easing: 'easeOutElastic',
                     elasticity: 600
                 }
@@ -261,7 +261,7 @@
 })(window);
 
 
-(function() {
+function initializeTilt(callback) {
     var tiltSettings = [];
 
     function init() {
@@ -273,4 +273,8 @@
     }
 
     init();
-})();
+
+    if (callback) {
+      callback();
+    }
+};

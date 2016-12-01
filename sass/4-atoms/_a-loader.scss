@@ -1,0 +1,20 @@
+/* _____ LOADER _____ */
+
+// Component variables
+$a-loader-background-color: $color-white-primary;
+$a-loader-background-image: '../img/loaders/loader--secondary.svg';
+$a-loader-background-image-position-top: center;
+$a-loader-transition: $transition-default;
+$a-loader-z-index: 500;
+
+.a-loader {
+    background: $a-loader-background-color url($a-loader-background-image) center $a-loader-background-image-position-top no-repeat;
+    transition: $a-loader-transition;
+    z-index   : $a-loader-z-index;
+    @include position(absolute, 0, 0, 0, 0);
+
+    &--is-invisible {
+        opacity   : 0;
+        visibility: hidden;
+    }
+}

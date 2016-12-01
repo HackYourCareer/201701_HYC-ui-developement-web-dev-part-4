@@ -1,0 +1,45 @@
+/* _____ TEXTAREA _____ */
+
+// Component variables
+$a-textarea--primary-background-color: #fff;
+$a-textarea--primary-text-color: $color-blue-primary;
+$a-textarea--primary-border-color: $color-blue-light-primary;
+$a-textarea--primary-transition: $transition-default;
+$a-textarea--primary-margin: 0;
+$a-textarea--primary-padding: 1.25rem 2.5rem;
+$a-textarea--primary-font-family: $font-ubuntu;
+$a-textarea--primary-font-size: 1.8rem;
+$a-textarea--primary-font-weight: 300;
+$a-textarea--primary-background-focus: #fff;
+$a-textarea--primary-box-shadow-focus: $box-shadow-tertiary;
+
+.a-textarea {
+    display  : block;
+    width    : 100%;
+    max-width: 100%;
+    min-width: 100%;
+
+    &--primary {
+        color     : $a-textarea--primary-text-color;
+        background: $a-textarea--primary-background-color;
+        border    : .1rem solid $a-textarea--primary-border-color;
+        transition: $a-textarea--primary-transition;
+        margin    : $a-textarea--primary-margin;
+        padding   : $a-textarea--primary-padding;
+        font      : {
+            family: $a-textarea--primary-font-family;
+            size  : $a-textarea--primary-font-size;
+            weight: $a-textarea--primary-font-weight;
+        }
+        @include input-placeholder {
+            color  : $a-textarea--primary-text-color;
+            opacity: 1;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow      : $a-textarea--primary-box-shadow-focus;
+            background-color: $a-textarea--primary-background-focus;
+        }
+    }
+}

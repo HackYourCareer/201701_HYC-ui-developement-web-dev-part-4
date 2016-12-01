@@ -1,6 +1,3 @@
-@import './1-tools/variables';
-@import './1-tools/mixins';
-
 /* _____ PARAGRAPH _____ */
 
 // Component variables
@@ -30,6 +27,22 @@ $a-paragraph--tertiary-margin: 0 0 1.25rem;
 $a-paragraph--tertiary-font-family: $font-cabin;
 $a-paragraph--tertiary-font-size: 1.4rem;
 $a-paragraph--tertiary-font-weight: 400;
+
+$a-paragraph--watermark-text-color: rgba($color-blue-dark-primary, 0.25);
+$a-paragraph--watermark-line-height: 140%;
+$a-paragraph--watermark-margin: 0;
+$a-paragraph--watermark-padding: 5rem;
+$a-paragraph--watermark-font-family: $font-cabin;
+$a-paragraph--watermark-font-size: 5rem;
+$a-paragraph--watermark-font-weight: 400;
+
+$a-paragraph--blend-text-color: rgba($color-blue-dark-primary, 0.5);
+$a-paragraph--blend-line-height: 140%;
+$a-paragraph--blend-margin: 0;
+$a-paragraph--blend-padding: 0;
+$a-paragraph--blend-font-family: $font-cabin;
+$a-paragraph--blend-font-size: 1.6rem;
+$a-paragraph--blend-font-weight: 400;
 
 .a-paragraph {
     &--stand-out {
@@ -65,13 +78,42 @@ $a-paragraph--tertiary-font-weight: 400;
     }
 
     &--tertiary {
-        color      : $a-paragraph--tertiary-text-color;
-        line-height: $a-paragraph--tertiary-line-height;
-        margin     : $a-paragraph--tertiary-margin;
-        font       : {
+        color         : $a-paragraph--tertiary-text-color;
+        line-height   : $a-paragraph--tertiary-line-height;
+        margin        : $a-paragraph--tertiary-margin;
+        text-transform: capitalize;
+        font          : {
             family: $a-paragraph--tertiary-font-family;
             size  : $a-paragraph--tertiary-font-size;
             weight: $a-paragraph--tertiary-font-weight;
+        }
+    }
+
+    &--watermark {
+        color      : $a-paragraph--watermark-text-color;
+        line-height: $a-paragraph--watermark-line-height;
+        margin     : $a-paragraph--watermark-margin;
+        padding    : $a-paragraph--watermark-padding;
+        text-align : center;
+        font       : {
+            family: $a-paragraph--watermark-font-family;
+            size  : $a-paragraph--watermark-font-size;
+            weight: $a-paragraph--watermark-font-weight;
+        }
+        @include flex-container();
+        @include column-span(all);
+    }
+
+    &--blend {
+        color      : $a-paragraph--blend-text-color;
+        line-height: $a-paragraph--blend-line-height;
+        margin     : $a-paragraph--blend-margin;
+        padding    : $a-paragraph--blend-padding;
+        text-align : center;
+        font       : {
+            family: $a-paragraph--blend-font-family;
+            size  : $a-paragraph--blend-font-size;
+            weight: $a-paragraph--blend-font-weight;
         }
     }
 }
