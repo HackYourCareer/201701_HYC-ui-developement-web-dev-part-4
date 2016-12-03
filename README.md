@@ -2,6 +2,9 @@
 
 Source code from ["UI Development - Web Dev. part 4/4"](https://www.facebook.com/events/1119959831422882/) lecture.
 
+## Quick start
+Just double click index.html :)
+
 ## Prerequisites
 1. [Install Node.js and npm](https://docs.npmjs.com/getting-started/installing-node)
 2. [Install Yarn](https://yarnpkg.com/en/docs/install)
