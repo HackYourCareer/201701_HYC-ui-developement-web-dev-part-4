@@ -13,8 +13,8 @@ Just double click index.html :)
 
 ## Installation
 ```
-git clone https://github.com/SAPHybrisGliwice/from-zero-to-web-developer-hero-part-1.git
-cd from-zero-to-web-developer-hero-part-1
+git clone https://github.com/SAPHybrisGliwice/ui-developement-web-dev-part-4.git
+cd ui-developement-web-dev-part-4
 yarn run init
 ```
 
