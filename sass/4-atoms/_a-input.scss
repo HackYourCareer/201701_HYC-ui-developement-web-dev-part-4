@@ -28,8 +28,9 @@ $a-input--secondary-background-focus: #fff;
 $a-input--secondary-box-shadow-focus: $box-shadow-tertiary;
 
 .a-input {
-    display: block;
-    width  : 100%;
+    display      : block;
+    width        : 100%;
+    text-overflow: ellipsis;
 
     &--primary {
         color     : $a-input--primary-text-color;

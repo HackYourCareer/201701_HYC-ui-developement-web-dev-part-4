@@ -8,13 +8,6 @@
 // }
 //
 
-// CURSORS
-//
-// Cursor default
-.u-cursor-default {
-    cursor: default;
-}
-
 // TRANSITIONS
 //
 // All
@@ -99,6 +92,39 @@
     }
     @media all and (min-width: $screen-lg) {
          @include columns(20em 4);
+    }
+}
+
+// Hidden (with different responsive breakpoints)
+.u-hidden {
+    &--xs {
+        @media all and (max-width: $screen-xs) {
+            display: none;
+        }
+    }
+
+    &--sm {
+        @media all and (min-width: $screen-xs) and (max-width: $screen-sm) {
+            display: none;
+        }
+    }
+
+    &--md {
+        @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+            display: none;
+        }
+    }
+
+    &--lg {
+        @media all and (min-width: $screen-md) and (max-width: $screen-lg) {
+            display: none;
+        }
+    }
+
+    &--xl {
+        @media all and (min-width: $screen-lg) {
+            display: none;
+        }
     }
 }
 
