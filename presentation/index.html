@@ -44,19 +44,21 @@
           <section>
             <h3 style="text-transform: none">Ogłoszenia parafialne</h3><br/><br/>
             <ul>
-              <li>Owoce i soki</li>
-              <li>Smycze SAP Hybris</li>
-              <li>Ankieta</li>
-              <li>Kod źródłowy aplikacji</li>
-              <li>Wykłady częściowo w jęz. angielskim</li>
+              <li class="fragment">Owoce i soki</li>
+              <li class="fragment">Smycze SAP Hybris</li>
+              <li class="fragment">Ankieta</li>
+              <li class="fragment">Kod źródłowy aplikacji</li>
+              <li class="fragment">Wykłady częściowo w jęz. angielskim</li>
+              <li class="fragment">Nagrody dla najbardziej aktywnych!</li>
             </ul>
           </section>
           <section>
             <h3 style="text-transform: none">Agenda</h3><br/><br/>
             <ul>
-              <li class="fragment"><a href="#cssBasics">CSS - podstawy</a></li>
-              <li class="fragment"><a href="#sassBasics">Sass - podstawy</a></li>
               <li class="fragment"><a href="#proGamerBriefing">Aplikacja ProGamer - briefing</a></li>
+              <li class="fragment"><a href="#cssBasics">CSS - intro</a></li>
+              <li class="fragment"><a href="#sassBasics">Sass - intro</a></li>
+              <li class="fragment"><a href="#atomicDesign">Atomic Design</a></li>
               <li class="fragment"><a href="#liveCoding">Live coding!</a></li>
               <li class="fragment"><a href="#resources">Resources</a></li>
               <li class="fragment"><a href="#qa">Q&A</a></li>
@@ -71,164 +73,141 @@
             </ul>
           </section>
         </section>
+        <section id="proGamerBriefing" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <h2>Aplikacja ProGamer - briefing</h2>
+          </section>
+        </section>
         <section id="cssBasics" data-background-image="lib/repeatable_pattern_background.png">
           <section>
-            <h2>CSS - podstawy</h2>
+            <h2>CSS - intro</h2>
           </section>
           <section>
             <h2>No właśnie, <br>co to takiego <strong>CSS</strong>?</h2>
-            <ul>
-              <li class="fragment">język służący do graficznego formatowania elementów HTML, które tworzą wygląd strony internetowej</li>
-            </ul>
             <img class="fragment" src="lib/img-css/kolorowanka.jpg" style="height: 50%">
           </section>
           <section>
-            <h2>CSS selektory</h2>
-            <pre class="fragment">
-              <div style="position: relative; display: block; height: 170px;">
+            <h2>Składnia CSS</h2>
+            <pre>
+              <div class="fragment" style="position: relative; display: block; height: 170px;">
                 <code>
-    /* class */
-
+    &lt;div class="tower-of-pisa"&gt;&lt;/div&gt;
+                </code>
+              </div>
+              <div class="fragment" style="position: relative; display: block; height: 170px;">
+                <code>
     .tower-of-pisa {
       font-style: italic;
     }
-              </code>
-              <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
-            </div>
-            <div class="fragment" style="position: relative; display: block; height: 170px;">
-              <code>
-    /* ID */
-
-    #ninja {
-      visibility: hidden;
-      color: black;
-    }
                 </code>
-                <img src="lib/img-css/ninja.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
               </div>
             </pre>
-          </section>
-          <section>
-            <h2>CSS selektory</h2>
-            <pre class="fragment">
-              <div style="position: relative; display: block; height: 180px;">
-                <code>
-    /* element */
-
-    body {
-      height: 100%;
-      display: flex;
-    }
-                </code>
-                <img src="lib/img-css/body.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
-              </div>
-              <div class="fragment" style="position: relative; display: block; height: 220px;">
-                <code>
-    /* combining selectors */
-    #europe .country div {
-      border: none;
-    }
-
-    /* layering selectors */
-    .ikea .section .furniture {
-      display: table;
-    }
-                </code>
-                <img src="lib/img-css/europe.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
-              </div>
-            </pre>
-          </section>
-          <section>
-            <h2>Pseudo selektory</h2>
-            <div class="fragment">
-              <pre>
-                <code>
-    /* mouse over link */               /* selected link */
-    a:hover {                           a:active {
-        color: #FF00FF;                     color: #0000FF;
-    }                                   }
-                </code>
-              </pre>
-              <pre>
-                <code>
-    /* focused element */               /* visited element */
-    .submit-button:focus {               #doctor:visited::before {
-        border: 1px solid #FF0000;        color: green;
-    }                                   }
-
-                                        #doctor:visited::after {
-                                          color: pink;
-                                        }
-                </code>
-              </pre>
-            </div>
-          </section>
-          <section>
-            <h2>Najczęściej spotykane właściwości CSS</h2>
-            <ul>
-              <li class="fragment">jednostki</li>
-              <ul>
-                <li class="fragment">jednostki absolutne<br>
-                  <ul>
-                    <li><strong>px, cm, mm, in, pt, pc</strong></li>
-                  </ul>
-                </li>
-                <li class="fragment">jednostki relatywne<br>
-                  <ul>
-                    <li><strong>%, em, ex, ch, rem, vm/vh, vmin/vmax</strong></li>
-                  </ul>
-                </li>
-              </ul>
-              <li class="fragment">kolory<br>
-                <ul class="fragment">
-                  <li>predefiniowane nazwy kolorów <br> <strong>/* .roses {color: red;} */</strong></li>
-                  <li>heksadecymalny <br> <strong>/* #chucknorris {color: #BADA55;} */</strong></li>
-                  <li>RGB, HSL / RGBA, HSLA</li>
-                </ul>
-              </li>
-            </ul>
-          </section>
-          <section>
-            <h2>Linki do materiałów</h2>
-            <ul>
-              <li class="fragment">do pokodzenia: <a href="http://codepen.io/">Code Pen</a></li>
-              <li class="fragment">do obejrzenia: <a href="https://css-tricks.com/">CSS Tricks</a></li>
-              <li class="fragment">do poczytania: <a href="http://webkod.pl/kurs-css/lekcje/dzial-1/css-co-to-takiego">Kurs CSS - webkod.pl</a></li>
-              <li class="fragment">dokumentacja: <a href="http://www.w3schools.com/css/">W3Schools CSS</a></li>
-            </ul>
           </section>
         </section>
         <section id="sassBasics" data-background-image="lib/repeatable_pattern_background.png">
           <section>
-            <h2>Sass - podstawy</h2>
+            <h2>Sass - intro</h2>
           </section>
           <section>
-            <h2>SASS - preprocesor CSS</h2>
-            <ul>
-              <li class="fragment">mówiąc „piszę w SASS” mówimy „piszę kod CSS”</li>
-              <li class="fragment">oprócz tego możemy posłużyć się wieloma dodatkowymi poleceniami, które już w „czystym” CSS nie byłyby poprawne: <br>
-                <ul class="fragment">
-                  <li>zmienne (ang. variable)</li>
-                  <li>zagnieżdżanie (ang. nesting)</li>
-                  <li>domieszki (ang. mixins)</li>
-                </ul>
-              </li>
-            </ul>
+            <h2>Dlaczego Sass?</h2>
+            <img class="fragment" src="lib/img-css/peter-griffin-css.gif">
           </section>
           <section>
-            <h2>Atomic design</h2>
+            <h2>Sass - CSS na sterydach</h2>
+            <img class="fragment" src="lib/img-css/steroids.gif">
           </section>
           <section>
-            <h2>Linki do materiałów</h2>
-            <ul>
-              <li class="fragment">atomic design <a href="http://patternlab.io/">Pattern Lab</a></li>
-              <li class="fragment">dokumentacja: <a href="http://sass-lang.com/">SASS</a></li>
-            </ul>
+            <h2>Sass - CSS na sterydach</h2>
+<div class="fragment fade-in" style="
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+">
+<div class="fragment fade-out" style="position: relative;">
+            <pre>
+                <code>
+      .tower-of-pisa {
+        font-style: italic;
+      }
+                </code>
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+            </pre>
+</div>
+</div>
+<div class="fragment fade-in" style="
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+">
+<div class="fragment fade-out" style="position: relative;">
+            <pre>
+                <code>
+    .italy-monuments {
+      .tower-of-pisa {
+        font-style: italic;
+      }
+    }
+                </code>
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+            </pre>
+</div>
+</div>
+<div class="fragment fade-in" style="
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+">
+<div class="fragment fade-out" style="position: relative;">
+            <pre>
+                <code>
+    $tower-color: white;
+
+    .italy-monuments {
+      .tower-of-pisa {
+        font-style: italic;
+        color: $tower-color;
+      }
+    }
+                </code>
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+            </pre>
+</div>
+</div>
+<div class="fragment fade-in" style="
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+">
+<div class="fragment fade-out" style="position: relative;">
+            <pre>
+                <code>
+    $tower-color: white;
+
+    @mixin leaning-tower() {
+      font-style: italic;
+      color: $tower-color;
+    }
+
+    .italy-monuments {
+      .tower-of-pisa {
+        @include leaning-tower();
+      }
+    }
+                </code>
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+            </pre>
+</div>
+</div>
           </section>
         </section>
-        <section id="proGamerBriefing" data-background-image="lib/repeatable_pattern_background.png">
+        <section id="atomicDesign">
           <section>
-            <h2>Aplikacja ProGamer - briefing</h2>
+            <h2>Atomic design</h2>
           </section>
         </section>
         <section id="liveCoding" data-background-image="lib/repeatable_pattern_background.png">
@@ -239,6 +218,14 @@
         <section id="resources" data-background-image="lib/repeatable_pattern_background.png">
           <section>
             <h2>Resources</h2>
+            <ul>
+              <li class="fragment">do pokodzenia: <a href="http://codepen.io/">Code Pen</a></li>
+              <li class="fragment">do obejrzenia: <a href="https://css-tricks.com/">CSS Tricks</a></li>
+              <li class="fragment">do poczytania: <a href="http://webkod.pl/kurs-css/lekcje/dzial-1/css-co-to-takiego">Kurs CSS - webkod.pl</a></li>
+              <li class="fragment">dokumentacja: <a href="http://www.w3schools.com/css/">W3Schools CSS</a></li>
+              <li class="fragment">atomic design <a href="http://patternlab.io/">Pattern Lab</a></li>
+              <li class="fragment">dokumentacja: <a href="http://sass-lang.com/">SASS</a></li>
+            </ul>
           </section>
         </section>
         <section id="qa" data-background-image="lib/repeatable_pattern_background.png">
