@@ -80,11 +80,15 @@
         </section>
         <section id="cssBasics" data-background-image="lib/repeatable_pattern_background.png">
           <section>
+            <img style="width:20%; border:none; box-shadow:none; margin:0 0 50px" src="lib/css3.png" />
             <h2>CSS - intro</h2>
           </section>
           <section>
-            <h2>No właśnie, <br>co to takiego <strong>CSS</strong>?</h2>
+            <h2>No właśnie, <br>czym właściwie jest <strong>CSS</strong>?</h2>
             <img class="fragment" src="lib/img-css/kolorowanka.jpg" style="height: 50%">
+          </section>
+          <section>
+            <img src="lib/img-css/css-is-awesome.jpeg">
           </section>
           <section>
             <h2>Składnia CSS</h2>
@@ -107,11 +111,18 @@
         </section>
         <section id="sassBasics" data-background-image="lib/repeatable_pattern_background.png">
           <section>
+            <img style="width:30%; border:none; box-shadow:none; margin:0 0 50px" src="lib/sass.svg" />
             <h2>Sass - intro</h2>
           </section>
           <section>
             <h2>Dlaczego Sass?</h2>
             <img class="fragment" src="lib/img-css/peter-griffin-css.gif">
+          </section>
+          <section>
+            <blockquote style="font-size: 60px;">
+Writing CSS is easy.<br>
+Writing <strong>maintainable</strong> CSS is hard.
+            </blockquote>
           </section>
           <section>
             <h2>Sass - CSS na sterydach</h2>
@@ -128,9 +139,11 @@
 <div class="fragment fade-out" style="position: relative;">
             <pre>
                 <code>
-      .tower-of-pisa {
-        font-style: italic;
-      }
+    // "Zwykły" CSS
+
+    .tower-of-pisa {
+      font-style: italic;
+    }
                 </code>
                 <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
             </pre>
@@ -145,6 +158,8 @@
 <div class="fragment fade-out" style="position: relative;">
             <pre>
                 <code>
+    // Nesting
+
     .italy-monuments {
       .tower-of-pisa {
         font-style: italic;
@@ -164,6 +179,8 @@
 <div class="fragment fade-out" style="position: relative;">
             <pre>
                 <code>
+    // Zmienne
+
     $tower-color: white;
 
     .italy-monuments {
@@ -186,6 +203,8 @@
 <div class="fragment fade-out" style="position: relative;">
             <pre>
                 <code>
+    // Mixiny
+
     $tower-color: white;
 
     @mixin leaning-tower() {
@@ -205,9 +224,14 @@
 </div>
           </section>
         </section>
-        <section id="atomicDesign">
+        <section id="atomicDesign" data-background-image="lib/repeatable_pattern_background.png">
           <section>
+            <img src="lib/atomic-design.png" style="border:none; box-shadow:none; width:40%; margin:0 0 25px;">
             <h2>Atomic design</h2>
+          </section>
+          <section>
+            <h2>Na czym polega Atomic Design?</h2>
+            <img class="fragment" src="lib/videos/atomic-design.gif" style="border:none; box-shadow:none; width:100%; margin:25px 0 0;">
           </section>
         </section>
         <section id="liveCoding" data-background-image="lib/repeatable_pattern_background.png">
