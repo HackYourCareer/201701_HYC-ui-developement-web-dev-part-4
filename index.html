@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <link rel="stylesheet" href="bower_components/flexboxgrid/dist/flexboxgrid.css">
+    <!-- <link rel="stylesheet" href="bower_components/flexboxgrid/dist/flexboxgrid.css"> -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -23,129 +23,127 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <header class="o-header">
+    <header>
         <a href="#" title="ProGamer">
-            <img class="a-logo u-responsive-img u-hidden--xs" src="img/logo.svg" alt="ProGamer">
-            <img class="a-logo u-responsive-img u-hidden--sm u-hidden--md u-hidden--lg u-hidden--xl" src="img/logo--small.svg" alt="ProGamer">
         </a>
-        <nav class="m-navigation m-navigation--primary">
-            <button class="m-navigation__trigger m-navigation__trigger--primary a-btn a-btn--primary a-btn--lg">&#9776;</button>
-            <div class="m-navigation__menu m-navigation__menu--primary">
-                <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#about">About</a>
-                <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#search">Search</a>
-                <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#contact">Contact</a>
+        <nav>
+            <!-- <button>&#9776;</button> -->
+            <div>
+                <a href="#about">About</a>
+                <a href="#search">Search</a>
+                <a href="#contact">Contact</a>
             </div>
         </nav>
     </header>
 
-    <main class="o-content">
-        <section id="about" class="u-jump-target">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
-                    <figure id="js-videoContainer" class="m-player">
-                        <video id="js-video" class="m-player__video" width="100%" controls="true" preload="metadata" poster="img/m-player__video__cover.jpg">
+    <main>
+        <section id="about">
+            <div>
+                <div>
+                    <figure id="js-videoContainer">
+                        <video id="js-video" width="100%" controls="true" preload="metadata" poster="img/m-player__video__cover.jpg">
                           <source src="videos/ProGamer_Teaser_Trailer.mp4" type="video/mp4" />
-                      </video>
-                        <nav id="js-video-controls" class="m-player__controls m-controls">
-                            <ul class="m-controls__list controls">
-                                <li class="m-controls__item m-controls__item--sm">
-                                    <button id="js-playpause" class="a-btn a-btn--tertiary" type="button">
-                                  <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/play.svg" width="11px" height="13px">
-                                  <img class="a-btn__icon a-btn__icon--active" src="img/icons/pause.svg" width="11px" height="13px">
+                        </video>
+                        <nav id="js-video-controls">
+                            <ul>
+                                <li>
+                                    <button id="js-playpause" type="button">
+                                  <img src="img/icons/play.svg" width="11px" height="13px">
+                                  <img src="img/icons/pause.svg" width="11px" height="13px">
                                 </button>
                                 </li>
-                                <li class="m-controls__item m-controls__item--lg m-controls__item--is-flex progress">
-                                    <progress id="js-progress" class="m-controls__subitem m-controls__subitem--lg a-progress" value="0" min="0">
+                                <li>
+                                    <progress id="js-progress" value="0" min="0">
                                  <span id="js-progress-bar"></span>
                               </progress>
                                 </li>
-                                <li class="m-controls__item m-controls__item--sm">
-                                    <button id="js-mute" class="a-btn a-btn--tertiary" type="button">
-                                  <img class="a-btn__icon a-btn__icon--inactive" src="img/icons/unmuted.svg" width="13px" height="13px">
-                                  <img class="a-btn__icon a-btn__icon--active" src="img/icons/muted.svg" width="13px" height="13px">
+                                <li>
+                                    <button id="js-mute" type="button">
+                                  <img src="img/icons/unmuted.svg" width="13px" height="13px">
+                                  <img src="img/icons/muted.svg" width="13px" height="13px">
                               </button>
                                 </li>
-                                <li class="m-controls__item m-controls__item--sm">
-                                    <button id="js-fs" class="a-btn a-btn--tertiary" type="button">
-                                  <img class="a-btn__icon" src="img/icons/fullscreen.svg" width="13px" height="13px">
+                                <li>
+                                    <button id="js-fs" type="button">
+                                  <img src="img/icons/fullscreen.svg" width="13px" height="13px">
                                 </button>
                                 </li>
                             </ul>
                         </nav>
                     </figure>
                 </div>
-                <div class="m-headline col-lg-6 col-md-6 col-sm-12">
-                    <h1 class="a-title a-title--stand-out">ProGamer is the largest existing games database.</h1>
-                    <p class="a-paragraph a-paragraph--stand-out">
+                <div>
+                    <h1>ProGamer is the largest existing games database.</h1>
+                    <p>
                         Search for anything:
                     </p>
-                    <ul class="m-list m-list--stand-out">
-                        <li class="m-list__item m-list__item--stand-out">☑ games,</li>
-                        <li class="m-list__item m-list__item--stand-out">☑ genres,</li>
-                        <li class="m-list__item m-list__item--stand-out">☑ franchises,</li>
-                        <li class="m-list__item m-list__item--stand-out">☑ game characters</li>
+                    <ul>
+                        <li>☑ games,</li>
+                        <li>☑ genres,</li>
+                        <li>☑ franchises,</li>
+                        <li>☑ game characters</li>
                     </ul>
-                    <p class="a-paragraph a-paragraph--stand-out">
+                    <p>
                         ...and much more!
                     </p>
                 </div>
             </div>
         </section>
 
-        <section id="search" class="u-jump-target">
+        <section id="search">
 
-            <h1 class="a-title a-title--primary">ProGamer Search</h1>
+            <h1>ProGamer Search</h1>
 
-            <nav class="m-filter">
-                <input id="js-search-query" class="a-input a-input--primary" type="search" placeholder="Search for anything...">
-                <p class="a-paragraph a-paragraph--secondary">
+            <nav>
+                <input id="js-search-query" type="search" placeholder="Search for anything...">
+                <p>
                     Limit results by:
                 </p>
-                <div class="m-filter__checkbox-container">
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--games">
-                    <label class="a-label a-label--primary" for="limit-results--games">Games</label>
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--franchises">
-                    <label class="a-label a-label--primary" for="limit-results--franchises">Franchises</label>
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--characters">
-                    <label class="a-label a-label--primary" for="limit-results--characters">Characters</label>
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--concepts">
-                    <label class="a-label a-label--primary" for="limit-results--concepts">Concepts</label>
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--objects">
-                    <label class="a-label a-label--primary" for="limit-results--objects">Objects</label>
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--locations">
-                    <label class="a-label a-label--primary" for="limit-results--locations">Locations</label>
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--persons">
-                    <label class="a-label a-label--primary" for="limit-results--persons">Persons</label>
-                    <input type="checkbox" class="a-checkbox a-checkbox--primary" id="limit-results--companies">
-                    <label class="a-label a-label--primary" for="limit-results--companies">Companies</label>
+                <div>
+                    <input type="checkbox" id="limit-results--games">
+                    <label for="limit-results--games">Games</label>
+                    <input type="checkbox" id="limit-results--franchises">
+                    <label for="limit-results--franchises">Franchises</label>
+                    <input type="checkbox" id="limit-results--characters">
+                    <label for="limit-results--characters">Characters</label>
+                    <input type="checkbox" id="limit-results--concepts">
+                    <label for="limit-results--concepts">Concepts</label>
+                    <input type="checkbox" id="limit-results--objects">
+                    <label for="limit-results--objects">Objects</label>
+                    <input type="checkbox" id="limit-results--locations">
+                    <label for="limit-results--locations">Locations</label>
+                    <input type="checkbox" id="limit-results--persons">
+                    <label for="limit-results--persons">Persons</label>
+                    <input type="checkbox" id="limit-results--companies">
+                    <label for="limit-results--companies">Companies</label>
                 </div>
-                <div class="m-filter__btn-container">
-                    <a href="#" id="js-make-an-ajax-call" class="a-btn a-btn--secondary a-btn--sm">Search</a>
+                <div>
+                    <a href="#" id="js-make-an-ajax-call">Search</a>
                 </div>
             </nav>
 
-            <div class="m-items-container">
-                <div id="js-loader" class="a-loader" style="display: none;"></div>
-                <div id="js-search-results" class="u-columns">
-                    <p class="a-paragraph a-paragraph--watermark">Type something into search bar...</p>
+            <div>
+                <div id="js-loader" style="display: none;"></div>
+                <div id="js-search-results">
+                    <p>Type something into search bar...</p>
                 </div>
             </div>
 
         </section>
 
-        <section id="contact" class="u-jump-target">
+        <section id="contact">
 
-            <h1 class="a-title a-title--primary">Contact</h1>
+            <h1>Contact</h1>
 
-            <form class="m-form" action="" method="post">
-                <fieldset class="m-form__fieldset">
-                    <input class="a-input a-input--secondary" placeholder="Your e-mail" type="email" tabindex="1" required>
+            <form action="" method="post">
+                <fieldset>
+                    <input placeholder="Your e-mail" type="email" tabindex="1" required>
                 </fieldset>
-                <fieldset class="m-form__fieldset">
-                    <textarea class="a-textarea a-textarea--primary" placeholder="Type your message here..." tabindex="2" required></textarea>
+                <fieldset>
+                    <textarea placeholder="Type your message here..." tabindex="2" required></textarea>
                 </fieldset>
-                <fieldset class="m-form__fieldset m-form__fieldset--align-right">
-                    <button class="a-btn a-btn--secondary a-btn--sm" name="submit" type="submit" id="submit" data-submit="...Sending">Send</button>
+                <fieldset>
+                    <button name="submit" type="submit" id="submit" data-submit="...Sending">Send</button>
                 </fieldset>
             </form>
 
@@ -153,8 +151,8 @@
 
     </main>
 
-    <footer class="o-footer">
-        <p class="a-paragraph a-paragraph--blend">
+    <footer>
+        <p>
             Copyright © 2016
         </p>
     </footer>

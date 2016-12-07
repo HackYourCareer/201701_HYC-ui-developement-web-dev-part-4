@@ -22,8 +22,16 @@ yarn run init
 ```
 yarn run compile
 ```
+or
+```
+gulp sass
+```
 
 ## Sass watch
 ```
 yarn run watch
+```
+or
+```
+gulp sass:watch
 ```
