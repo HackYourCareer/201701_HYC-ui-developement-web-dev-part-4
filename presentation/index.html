@@ -135,7 +135,7 @@
       font-style: italic;
     }
                 </code>
-                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 40px; right: 5px; border: 0; background: 0; box-shadow: none;">
               </div>
             </pre>
           </section>
@@ -147,10 +147,8 @@
           </section>
           <section>
             <h2>Dlaczego Sass?</h2>
-            <img class="fragment" src="lib/img-css/peter-griffin-css.gif">
-          </section>
-          <section>
-            <blockquote style="font-size: 60px;">
+            <br>
+            <blockquote class="fragment" style="font-size: 60px;">
 Writing CSS is easy.<br>
 Writing <strong>maintainable</strong> CSS is hard.
             </blockquote>
@@ -161,34 +159,24 @@ Writing <strong>maintainable</strong> CSS is hard.
           </section>
           <section>
             <h2>Sass - CSS na sterydach</h2>
-<div class="fragment fade-in" style="
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-">
-<div class="fragment fade-out" style="position: relative;">
-            <pre>
-                <code class="scss">
+            <div class="fragment fade-in" style=" position: absolute; top: 40%; left: 0; right: 0;">
+              <div class="fragment fade-out" style="position: relative;">
+                <pre>
+                  <code class="scss">
     // Awful CSS
 
     .italy .tower-of-pisa {
       font-style: italic;
     }
-                </code>
-                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
-            </pre>
-</div>
-</div>
-<div class="fragment fade-in" style="
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-">
-<div class="fragment fade-out" style="position: relative;">
-            <pre>
-                <code class="scss">
+                  </code>
+                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                </pre>
+              </div>
+            </div>
+            <div class="fragment fade-in" style=" position: absolute; top: 40%; left: 0; right: 0;">
+              <div class="fragment fade-out" style="position: relative;">
+                <pre>
+                  <code class="scss">
   // "Normal" CSS                   // Nesting 
 
   .italy .tower-of-pisa {           .italy {
@@ -196,20 +184,15 @@ Writing <strong>maintainable</strong> CSS is hard.
   }                                     font-style: italic;
                                       }
                                     }
-                </code>
-                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 15px; right: 5px; border: 0; background: 0; box-shadow: none;">
-            </pre>
-</div>
-</div>
-<div class="fragment fade-in" style="
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-">
-<div class="fragment fade-out" style="position: relative;">
-            <pre>
-                <code class="scss">
+                  </code>
+                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 15px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                </pre>
+              </div>
+            </div>
+            <div class="fragment fade-in" style=" position: absolute; top: 40%; left: 0; right: 0;">
+              <div class="fragment fade-out" style="position: relative;">
+                <pre>
+                  <code class="scss">
     // Variables
 
     $tower-color: white;
@@ -220,20 +203,15 @@ Writing <strong>maintainable</strong> CSS is hard.
         color: $tower-color;
       }
     }
-                </code>
-                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
-            </pre>
-</div>
-</div>
-<div class="fragment fade-in" style="
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-">
-<div class="fragment fade-out" style="position: relative;">
-            <pre>
-                <code class="scss">
+                  </code>
+                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                </pre>
+              </div>
+            </div>
+            <div class="fragment fade-in" style=" position: absolute; top: 40%; left: 0; right: 0;">
+              <div class="fragment fade-out" style="position: relative;">
+                <pre>
+                  <code class="scss">
     // Mixins
 
     $tower-color: white;
@@ -248,11 +226,12 @@ Writing <strong>maintainable</strong> CSS is hard.
         @include leaning-tower();
       }
     }
-                </code>
-                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
-            </pre>
-</div>
-</div>
+                  </code>
+                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                </pre>
+              </div>
+            </div>
+            <img class="fragment" src="lib/img-css/peter-griffin-css.gif">
           </section>
         </section>
         <section id="atomicDesign" data-background-image="lib/repeatable_pattern_background.png">
