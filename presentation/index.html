@@ -106,7 +106,9 @@
           </section>
           <section>
             <h2>Design</h2>
-            <img class="fragment" style="border:none; box-shadow:none; padding: 0;" src="lib/design.png" />
+            <a href="https://saphybrisgliwice.github.io/ui-developement-web-dev-part-4/" target="_blank">
+              <img class="fragment" style="width:80%; border:none; box-shadow:none; padding:0;" src="lib/design.png" />
+            </a>
           </section>
         </section>
         <section id="cssBasics" data-background-image="lib/repeatable_pattern_background.png">
@@ -166,20 +168,20 @@ Writing <strong>maintainable</strong> CSS is hard.
               <div class="fragment fade-out" style="position: relative;">
                 <pre>
                   <code class="scss">
-    // KEEPIN' IT REAL... BAD
+  // KEEPIN' IT REAL... BAD
 
-    h2.left                           h2.right
-    {                                 {
-      margin-top:0px;                 margin-top:0px;
-      margin-bottom:0px;              margin-bottom:0px;
-      padding-top:1px;                padding-top:0px;
-      padding-bottom:1px;             padding-bottom:0px;
-      padding-right:10px;             padding-left:10px;
-      background-color:#ffffff;       background-color:#ffffff
-    }                                 }
+  h2.left                         h2.right
+  {                               {
+    margin-top:0px;               margin-top:0px;
+    margin-bottom:0px;            margin-bottom:0px;
+    padding-top:1px;              padding-top:1px;
+    padding-bottom:1px;           padding-bottom:1px;
+    padding-right:10px;           padding-left:10px;
+    background-color:#ffffff;     background-color:rgb(255,255,255);
+  }                               }
 
-    span.marked     {color:#000000;background-color:green;}
-    span.unmarked   {color:#000000;background-color:red;}
+  span.checked    {background-color:white;color:green;}
+  span.unchecked  {background-color:#ffffff;color:red;}
                   </code>
                 </pre>
               </div>
@@ -239,6 +241,48 @@ Writing <strong>maintainable</strong> CSS is hard.
     }
                   </code>
                   <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 15px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                </pre>
+              </div>
+            </div>
+            <div class="fragment fade-in" style=" position: absolute; top: 30%; left: 0; right: 0;">
+              <div class="fragment fade-out" style="position: relative;">
+                <pre>
+                  <code class="scss">
+    // KEEPIN' IT REAL... GOOD
+
+    @mixin _title($left: true) {        h2 {
+      margin: 0 auto;                     &.left {
+      @if $left {                           @include _title();
+        padding: 1px 10px 1px 1px         }
+      } @else {                           &.right {
+        padding: 1px 1px 1px 10px           @include _title(false); 
+      }                                   }
+      background-color: white;          }
+    }
+                  </code>
+                </pre>
+              </div>
+            </div>
+            <div class="fragment fade-in" style=" position: absolute; top: 30%; left: 0; right: 0;">
+              <div class="fragment fade-out" style="position: relative;">
+                <pre>
+                  <code class="scss">
+    // KEEPIN' IT REAL... GOOD
+      $marker--bg-color: white;     $marker-checked--color: green;
+      $marker--border: gray;        $marker-unchecked--color: red;
+    span {
+      .checked, .unchecked {
+        background-color: $marker--bg-color;
+        border: $marker--border;
+      }
+      .checked {
+        color: $marker-checked--color;
+      }
+      .unchecked {
+        color: $marker-unchecked--color;
+      }
+    }
+                  </code>
                 </pre>
               </div>
             </div>
