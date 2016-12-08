@@ -74,6 +74,11 @@ ul:empty {
   display: none;
 }
 
+img {
+  width: auto;
+  max-height: 150px;
+}
+
 /* _____ VARIABLES _____ */
 /* _____ BASIC STYLES _____ */
 body,
