@@ -23,21 +23,23 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-    <header>
+    <header class="o-header">
         <a href="#" title="ProGamer">
+            <img class="a-logo u-responsive-img u-hidden--xs" src="img/logo.svg" alt="ProGamer">
+            <img class="a-logo u-responsive-img u-hidden--sm u-hidden--md u-hidden--lg u-hidden--xl" src="img/logo--small.svg" alt="ProGamer">
         </a>
-        <nav>
-            <!-- <button>&#9776;</button> -->
-            <div>
-                <a href="#about">About</a>
-                <a href="#search">Search</a>
-                <a href="#contact">Contact</a>
+        <nav class="m-navigation m-navigation--primary">
+            <button class="m-navigation__trigger m-navigation__trigger--primary a-btn a-btn--primary a-btn--lg">&#9776;</button>
+            <div class="m-navigation__menu m-navigation__menu--primary">
+                <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#about">About</a>
+                <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#search">Search</a>
+                <a class="m-navigation__item m-navigation__item--primary a-btn a-btn--primary a-btn--lg" href="#contact">Contact</a>
             </div>
         </nav>
     </header>
 
-    <main>
-        <section id="about">
+    <main class="o-content">
+        <section id="about" class="u-jump-target">
             <div>
                 <div>
                     <figure id="js-videoContainer">
@@ -90,7 +92,7 @@
             </div>
         </section>
 
-        <section id="search">
+        <section id="search" class="u-jump-target">
 
             <h1>ProGamer Search</h1>
 
@@ -131,7 +133,7 @@
 
         </section>
 
-        <section id="contact">
+        <section id="contact" class="u-jump-target">
 
             <h1>Contact</h1>
 

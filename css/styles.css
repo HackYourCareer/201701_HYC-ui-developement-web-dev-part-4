@@ -1,0 +1,356 @@
+/*
+  Bourbon documentation: http://bourbon.io/docs/
+ */
+/* _____ FONTS _____ */
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Ubuntu:300,400,500,700");
+/* _____ ICONS _____ */
+/* _____ MIXINS _____ */
+/* _____ NORMALIZE _____ */
+body {
+  min-height: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: scrollbar;
+  /* Hack to force all relatively and absolutely positioned elements still render while scrolling
+     Note: This is a bug for "-webkit-overflow-scrolling: touch" */
+}
+
+body > * {
+  all: initial;
+  -webkit-text-size-adjust: none;
+  -webkit-transform: translateZ(0px);
+  -moz-transform: translateZ(0px);
+  -ms-transform: translateZ(0px);
+  -o-transform: translateZ(0px);
+  transform: translateZ(0px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+svg ellipse,
+svg line,
+svg path,
+svg polygon,
+svg polyline,
+svg rect {
+  shape-rendering: geometricprecision;
+}
+
+@media print {
+  svg path {
+    fill: #000 !important;
+  }
+}
+
+h1:empty,
+h2:empty,
+h3:empty,
+h4:empty,
+h5:empty,
+h6:empty,
+li:empty,
+ol:empty,
+p:empty,
+ul:empty {
+  display: none;
+}
+
+/* _____ VARIABLES _____ */
+/* _____ BASIC STYLES _____ */
+body,
+html {
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+*::selection {
+  /* WebKit/Blink Browsers */
+  background: #e74c3c;
+  color: #ecf0f1;
+}
+
+*::-moz-selection {
+  /* Gecko Browsers */
+  background: #e74c3c;
+  color: #ecf0f1;
+}
+
+/*
+  Atoms are basic tags, such as form labels, inputs or buttons. Atoms are abstract; they provide a useful reference and allow you to see all your global styles laid out at a glance.
+ */
+/* _____ BUTTONS _____ */
+.a-btn {
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+  border: none;
+  text-decoration: none;
+}
+
+.a-btn--primary {
+  color: #ecf0f1;
+  background: none;
+  position: relative;
+  top: 0;
+  font-weight: 300;
+  font-family: "Ubuntu", sans-serif;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+.a-btn--primary:active, .a-btn--primary:focus, .a-btn--primary:hover {
+  color: #ecf0f1;
+  background: #e74c3c;
+}
+
+.a-btn--primary:hover {
+  box-shadow: 0 0.6rem 0.9rem 0 rgba(44, 62, 80, 0.33);
+  top: -0.3125rem;
+}
+
+.a-btn--primary:active, .a-btn--primary:focus {
+  box-shadow: none;
+  top: 0;
+}
+
+.a-btn--lg {
+  padding: 0 3rem;
+  height: 5rem;
+  font-size: 2.7rem;
+}
+
+.a-btn:active, .a-btn:focus, .a-btn:hover {
+  text-decoration: none;
+}
+
+/*
+  Molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom
+  can combine them together to form a search form molecule.
+ */
+/* _____ NAVIGATION _____ */
+.m-navigation--primary {
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+.m-navigation__trigger--primary:active + .m-navigation__menu--primary, .m-navigation__trigger--primary:focus + .m-navigation__menu--primary {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media all and (min-width: 992px) {
+  .m-navigation__trigger--primary {
+    display: none;
+  }
+}
+
+.m-navigation__menu--primary {
+  transition: all 300ms ease-in-out;
+}
+
+@media all and (max-width: 992px) {
+  .m-navigation__menu--primary {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100vh;
+    max-width: 480px;
+    background: rgba(44, 62, 80, 0.75);
+    padding: 2.5rem;
+    box-shadow: 0 0.6rem 0.9rem 0 rgba(44, 62, 80, 0.33);
+    position: fixed;
+    top: 10rem;
+    right: initial;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media all and (min-width: 992px) {
+  .m-navigation__menu--primary {
+    display: flex;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-flex-flow: row nowrap;
+    -moz-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+  }
+}
+
+/*
+  Organisms are groups of molecules (and possibly atoms) joined together to form distinct section of an interface.
+  Organisms can consist of similar and/or disparate molecule types. Building up from molecules to organisms encourages creating standalone, portable, reusable components.
+ */
+/* _____ CONTENT _____ */
+.o-content {
+  background: #ecf0f1;
+  padding: 2.5rem;
+  margin: 10rem 0 0;
+  display: block;
+}
+
+/* _____ HEADER _____ */
+.o-header {
+  background: #2c3e50;
+  box-shadow: 0 0.6rem 0.9rem 0 rgba(44, 62, 80, 0.33);
+  height: 10rem;
+  padding: 0 2.5rem;
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: initial;
+  left: 0;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+}
+
+/*
+  Utilities should be placed at the end of the stylesheet, because
+  they have to overwrite anything else.
+ */
+/* _____ UTILITIES _____ */
+.u-responsive-img {
+  width: 100%;
+  height: auto;
+}
+
+@media all and (max-width: 480px) {
+  .u-hidden--xs {
+    display: none;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .u-hidden--sm {
+    display: none;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 992px) {
+  .u-hidden--md {
+    display: none;
+  }
+}
+
+@media all and (min-width: 992px) and (max-width: 1200px) {
+  .u-hidden--lg {
+    display: none;
+  }
+}
+
+@media all and (min-width: 1200px) {
+  .u-hidden--xl {
+    display: none;
+  }
+}
+
+.u-jump-target::before {
+  content: '';
+  display: block;
+  height: 10rem;
+  /* fixed header height*/
+  margin: -10rem 0 0;
+  /* negative fixed header height */
+}

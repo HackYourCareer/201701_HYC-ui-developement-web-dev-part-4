@@ -1,0 +1,13 @@
+/* _____ CONTENT _____ */
+
+// Component variables
+$o-content-background: $color-white-primary;
+$o-content-padding: 2.5rem;
+$o-content-margin: 10rem 0 0;
+
+.o-content {
+    background: $o-content-background;
+    padding   : $o-content-padding;
+    margin    : $o-content-margin;
+    display   : block;
+}

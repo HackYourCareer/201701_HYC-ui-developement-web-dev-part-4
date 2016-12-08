@@ -7,3 +7,58 @@
 // 	property2: value;
 // }
 //
+
+// RESPONSIVENESS
+//
+// Responsive image
+.u-responsive-img {
+  width : 100%;
+  height: auto;
+}
+
+// Hidden (with different responsive breakpoints)
+.u-hidden {
+  &--xs {
+    @media all and (max-width: $screen-xs) {
+      display: none;
+    }
+  }
+
+  &--sm {
+    @media all and (min-width: $screen-xs) and (max-width: $screen-sm) {
+      display: none;
+    }
+  }
+
+  &--md {
+    @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+      display: none;
+    }
+  }
+
+  &--lg {
+    @media all and (min-width: $screen-md) and (max-width: $screen-lg) {
+      display: none;
+    }
+  }
+
+  &--xl {
+    @media all and (min-width: $screen-lg) {
+      display: none;
+    }
+  }
+}
+
+// JUMP TARGET
+$u-jump-target-height: 10rem;
+
+.u-jump-target {
+  &::before {
+    content: '';
+    display: block;
+    height : $u-jump-target-height;
+    /* fixed header height*/
+    margin : -$u-jump-target-height 0 0;
+    /* negative fixed header height */
+  }
+}
