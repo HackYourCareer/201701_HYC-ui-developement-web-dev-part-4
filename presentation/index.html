@@ -47,7 +47,6 @@
             <ul>
               <li class="fragment">Owoce i soki</li>
               <li class="fragment">Smycze SAP Hybris</li>
-              <li class="fragment">Ankieta</li>
               <li class="fragment">Kod źródłowy aplikacji</li>
               <li class="fragment">Wykłady częściowo w jęz. angielskim</li>
               <li class="fragment">Nagrody dla najbardziej aktywnych!</li>
@@ -157,7 +156,7 @@ Writing <strong>maintainable</strong> CSS is hard.
           </section>
           <section>
             <h2>Sass - CSS na sterydach</h2>
-            <img class="fragment" src="lib/img-css/steroids.gif">
+            <img class="fragment" src="lib/img-css/steroids.gif" width="50%">
           </section>
           <section>
             <h2>Sass - CSS na sterydach</h2>
@@ -169,10 +168,10 @@ Writing <strong>maintainable</strong> CSS is hard.
 ">
 <div class="fragment fade-out" style="position: relative;">
             <pre>
-                <code>
-    // "Zwykły" CSS
+                <code class="scss">
+    // Awful CSS
 
-    .tower-of-pisa {
+    .italy .tower-of-pisa {
       font-style: italic;
     }
                 </code>
@@ -188,16 +187,16 @@ Writing <strong>maintainable</strong> CSS is hard.
 ">
 <div class="fragment fade-out" style="position: relative;">
             <pre>
-                <code>
-    // Nesting
+                <code class="scss">
+  // "Normal" CSS                   // Nesting 
 
-    .italy-monuments {
-      .tower-of-pisa {
-        font-style: italic;
-      }
-    }
+  .italy .tower-of-pisa {           .italy {
+    font-style: italic;               .tower-of-pisa {
+  }                                     font-style: italic;
+                                      }
+                                    }
                 </code>
-                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 15px; right: 5px; border: 0; background: 0; box-shadow: none;">
             </pre>
 </div>
 </div>
@@ -209,12 +208,12 @@ Writing <strong>maintainable</strong> CSS is hard.
 ">
 <div class="fragment fade-out" style="position: relative;">
             <pre>
-                <code>
-    // Zmienne
+                <code class="scss">
+    // Variables
 
     $tower-color: white;
 
-    .italy-monuments {
+    .italy {
       .tower-of-pisa {
         font-style: italic;
         color: $tower-color;
@@ -233,8 +232,8 @@ Writing <strong>maintainable</strong> CSS is hard.
 ">
 <div class="fragment fade-out" style="position: relative;">
             <pre>
-                <code>
-    // Mixiny
+                <code class="scss">
+    // Mixins
 
     $tower-color: white;
 
@@ -243,7 +242,7 @@ Writing <strong>maintainable</strong> CSS is hard.
       color: $tower-color;
     }
 
-    .italy-monuments {
+    .italy {
       .tower-of-pisa {
         @include leaning-tower();
       }
@@ -276,9 +275,9 @@ Writing <strong>maintainable</strong> CSS is hard.
             <ul>
               <li class="fragment">do pokodzenia: <a href="http://www.codecademy.com/" target="_blank">Code Academy</a></li>
               <li class="fragment">do poczytania: <a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
-              <li class="fragment">do obejrzenia: <a href="https://www.youtube.com/watch?v=84LZyZsTiaA" target="_blank">Brad Frost – Atomic Design – btconfDUS2013</a></li>
-              <li class="fragment">Atomic Design: <a href="http://patternlab.io/" target="_blank">Pattern Lab</a></li>
-              <li class="fragment">Dokumentacja Sass: <a href="http://sass-lang.com/" target="_blank">Sass</a></li>
+              <li class="fragment">do obejrzenia: <br><a href="https://www.youtube.com/watch?v=84LZyZsTiaA" target="_blank">Brad Frost - Atomic Design - btconfDUS2013</a></li>
+              <li class="fragment">Atomic Design - <a href="http://patternlab.io/" target="_blank">Pattern Lab</a></li>
+              <li class="fragment">Dokumentacja <a href="http://sass-lang.com/" target="_blank">SASS</a></li>
             </ul>
           </section>
         </section>
@@ -289,6 +288,9 @@ Writing <strong>maintainable</strong> CSS is hard.
           </section>
           <section>
             <h2>Q&A</h2>
+          </section>
+          <section>
+            <h2>Ankieta</h2>
           </section>
           <section>
             <h2>Losowanie nagród</h2>
