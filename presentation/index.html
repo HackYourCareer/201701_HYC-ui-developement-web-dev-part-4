@@ -166,13 +166,22 @@ Writing <strong>maintainable</strong> CSS is hard.
               <div class="fragment fade-out" style="position: relative;">
                 <pre>
                   <code class="scss">
-    // Awful CSS
+    // KEEPIN' IT REAL... BAD
 
-    .italy .tower-of-pisa {
-      font-style: italic;
-    }
+    h2.left                           h2.right
+    {                                 {
+      margin-top:0px;                 margin-top:0px;
+      margin-bottom:0px;              margin-bottom:0px;
+      padding-top:1px;                padding-top:0px;
+      padding-bottom:1px;             padding-bottom:0px;
+      padding-right:10px;             padding-left:10px;
+      background-color:#ffffff;       background-color:#ffffff
+    }                                 }
+
+    span.marked     {color:#000000;background-color:green;}
+    span.unmarked   {color:#000000;background-color:red;}
                   </code>
-                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 15px; right: 5px; border: 0; background: 0; box-shadow: none;">
                 </pre>
               </div>
             </div>
@@ -207,7 +216,7 @@ Writing <strong>maintainable</strong> CSS is hard.
       }
     }
                   </code>
-                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 30px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 15px; right: 5px; border: 0; background: 0; box-shadow: none;">
                 </pre>
               </div>
             </div>
@@ -230,7 +239,7 @@ Writing <strong>maintainable</strong> CSS is hard.
       }
     }
                   </code>
-                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 45px; right: 5px; border: 0; background: 0; box-shadow: none;">
+                  <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 15px; right: 5px; border: 0; background: 0; box-shadow: none;">
                 </pre>
               </div>
             </div>
