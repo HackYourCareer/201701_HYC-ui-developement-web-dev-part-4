@@ -1,0 +1,172 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Web Development</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <img style="width:60%; border:none; background:transparent" src="lib/sap-hybris-logo.png" /><br/><br/>
+            <center>
+              <h3>Hack Your Career</h3><br/>
+              <img style="width:8%; border:none; background:transparent" src="lib/square-facebook-512.png" /> <a style="color:#3b5998">Hack.your.Career</a>
+            </center>
+          </section>
+          <section>
+            <img style="width:10%; box-shadow:none; border:none; background:transparent; margin:2%" src="lib/html5.png" />
+            <img style="width:7%; box-shadow:none; border:none; background:transparent; margin:2%" src="lib/css3.png" />
+            <br/><br/><br/>
+            <h3 style="text-transform: none">Web Dev. part 4/4</h3>
+            <h3 style="text-transform: none">UI Development Vol.2</h3>
+            <div class="authors-footer" style="position: absolute; right: 0; bottom: -50%;">
+              <p>Alan Hadyk (<a href="mailto:alan.hadyk@sap.com" title="alan.hadyk@sap.com">alan.hadyk@sap.com</a>)</p>
+              <p>Ivijan Hadija (<a href="mailto:ivijan.hadija@sap.com" title="ivijan.hadija@sap.com">ivijan.hadija@sap.com</a>)</p>
+            </div>
+          </section>
+          <section>
+            <h3 style="text-transform: none">Ogłoszenia parafialne</h3><br/><br/>
+            <ul>
+              <li class="fragment">Owoce i soki</li>
+              <li class="fragment">Smycze SAP Hybris</li>
+              <li class="fragment">Kod źródłowy aplikacji</li>
+              <li class="fragment">Wykłady częściowo w jęz. angielskim</li>
+              <li class="fragment">Nagrody dla najbardziej aktywnych!</li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="text-transform: none">Nagrody dla najbardziej aktywnych (kubki termiczne)</h3><br/><br/>
+            <img style="height:65%; border:none; box-shadow:none; padding: 0; margin:-5% 0 0;" src="lib/reward.png" />
+          </section>
+          <section>
+            <h3 style="text-transform: none">Agenda</h3><br/><br/>
+            <ul>
+              <li class="fragment"><a href="#rwd">RWD & media queries</a></li>
+              <li class="fragment"><a href="#crossBrowser">Cross-browser compatibility</a></li>
+              <li class="fragment"><a href="#bem">BEM</a></li>
+              <li class="fragment"><a href="#liveCoding">Live coding!</a></li>
+              <li class="fragment"><a href="#qa">Q&A</a></li>
+              <li class="fragment"><a href="#qa">Losowanie nagród</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="text-transform: none">Co zyskacie dzięki dzisiejszemu wykładowi?</h3><br/><br/>
+            <ul>
+              <li class="fragment">wiedzę dotyczącą tworzenia stron internetowych dla różnych rozmiarów ekranów i przeglądarek</li>
+              <li class="fragment">praktyczną wiedzę dotyczącą realnego wdrażania projektów i tworzenia interfejsów użytkownika</li>
+              <li class="fragment">inspirację i motywację do dalszej nauki</li>
+            </ul>
+          </section>
+        </section>
+        <section id="rwd" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <img style="width:20%; border:none; box-shadow:none; margin:0 0 50px" src="lib/css3.png" />
+            <h2>RWD & media queries</h2>
+          </section>
+          <section>
+            <h2>No właśnie, <br>czym właściwie jest <strong>CSS</strong>?</h2>
+            <img class="fragment" src="lib/img-css/kolorowanka.jpg" style="height: 50%">
+          </section>
+          <section>
+            <h2>Składnia CSS</h2>
+            <pre style="box-shadow: none;">
+              <div class="fragment" style="position: relative; display: block; height: 170px;">
+                <code>
+    &lt;div class="tower-of-pisa"&gt;&lt;/div&gt;
+                </code>
+              </div>
+              <div class="fragment" style="position: relative; display: block; height: 170px;">
+                <code>
+    .tower-of-pisa {
+      font-style: italic;
+    }
+                </code>
+                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 40px; right: 5px; border: 0; background: 0; box-shadow: none;">
+              </div>
+            </pre>
+          </section>
+        </section>
+        <section id="crossBrowser" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <img style="width:30%; border:none; box-shadow:none; margin:0 0 50px" src="lib/sass.svg" />
+            <h2>Cross-browser compatibility</h2>
+          </section>
+          <section>
+            <h2>Dlaczego Sass?</h2>
+            <div class="fragment" style="margin-top:100px;">
+              <blockquote style="font-size: 60px;">
+Writing CSS is easy.<br>
+Writing <strong>maintainable</strong> CSS is hard.
+              </blockquote>
+              <img style="width:30%; border:none; box-shadow:none; margin:50px 0 0" src="lib/img-css/sass-glasses.svg" />
+            </div>
+          </section>
+        </section>
+        <section id="bem" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <h2>BEM</h2>
+            <img src="lib/videos/mind-blown.gif" style="border:none; box-shadow:none; width:100%; margin:25px 0 0;">
+          </section>
+        </section>
+        <section id="liveCoding" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <h2>Live coding!</h2>
+          </section>
+        </section>
+        <section id="qa" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <h2>We're done!</h2>
+            <img src="lib/videos/mind-blown.gif" style="border:none; box-shadow:none; width:100%; margin:25px 0 0;">
+          </section>
+          <section>
+            <h2>Q&A</h2>
+          </section>
+          <section>
+            <h2>Losowanie nagród</h2>
+            <img src="lib/videos/rewards.gif" style="border:none; box-shadow:none; width:100%; margin:25px 0 0;">
+          </section>
+          <section>
+            <h2>Ankieta</h2>
+            <img src="lib/feedback.jpg" style="border:none; box-shadow:none; height:80%; margin:25px 0 0;">
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>

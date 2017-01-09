@@ -1,0 +1,800 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Web Development</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+
+					<section>
+						<img style="width:14%; border:none; background:transparent" src="lib/html5.png" />
+						<img style="width:10%; border:none; background:transparent" src="lib/css3.png" />
+						<img style="width:12%; border:none; background:transparent" src="lib/js-logo.png" />
+						<img style="width:15%; border:none; background:transparent" src="lib/reactjs.png" />
+						<img style="width:20%; border:none; background:transparent" src="lib/nodejs-512.png" />
+						<br/><br/><br/>
+						<h2>Web Development</h2>
+						<br/>
+						<p style="font-size:30px"><i><a>"From zero to web developer hero"</a></i></p>
+					</section>
+
+					<section>
+						<img style="width:60%; border:none; background:transparent" src="lib/sap-hybris-logo.png" /><br/><br/>
+						<center>
+							<h3>Hack Your Career</h3><br/>
+							<img style="width:8%; border:none; background:transparent" src="lib/square-facebook-512.png" /> <a style="color:#3b5998">Hack.your.Career</a>
+						</center>
+					</section>
+
+					<section>
+						<h2>Goals</h2>
+						<ul class="unordered-list" style="font-size: 32px">
+							<li>Basic Knowledge</li><br/>
+
+							<li>Technologies - What? When? How?</li><br/>
+
+							<li>Web Development - Theory vs. Practice</li><br/>
+
+							<li><a style="color:#efc860">JS</a> === flexibility</li></br>
+
+							<li>? (Web Development === <a style="color:#efc860">JS</a>)</li></br>
+						</ul>
+						<aside class="notes">
+						Co wyniesiecie z całego cyklu wykładow?<br/>
+
+						JS to fexibility: łatwy start, dużo frameworkow, liczne community
+						</aside>
+					</section>
+
+					<section>
+						<h2>Agenda</h2>
+						<ul class="unordered-list">
+							<li>04.11 - A brief introduction to modern JavaScript</li><br/>
+							<li>18.11 - NodeJS for Dummies</li><br/>
+							<li>25.11 - ReactJS – creating immutable interfaces</li><br/>
+							<li>02.12 - UI Development</li><br/>
+							<li>09.12 - <a>?</a></li>
+						</ul>
+						<aside class="notes">
+							(Microservices, REST, Retrieving data from external sources), (ReactJS, State management, Immutability), (CSS/LESS/SASS, HTML5, RWD).
+						</aside>
+					</section>
+				</section>
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+						<h2>A brief introduction to modern JavaScript</h2>
+						<div class="authors-footer" style="font-size:30px">
+							<p>Łukasz Przezorski</p>
+							<p>Kamil Kupczynski</p>
+						</div>
+					</section>
+
+					<section>
+						<h2>Goals</h2>
+						<ul class="unordered-list">
+							<li><a style="color:#efc860">JS</a> in year 2000 !== <a style="color:#efc860">JS</a> in year 2016</li><br/>
+							<li>Basic Knowledge in <a style="color:#efc860">ES6</a></li><br/>
+							<li>Required for the next lectures</li>
+						</ul>
+						<aside class="notes">
+						Co zyskacie dzięki dzisiejszemu wykładowi?<br/>
+						</aside>
+					</section>
+
+					<section>
+						<p style="font-size:55px">
+							<img style="width:20%; border:none; background:transparent" src="lib/js-logo.png" /> How we do it in 2016?
+						</p>
+					</section>
+				</section>
+
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<aside class="notes">
+						mity
+						js/java - skladnia/autoboxing
+    				</aside>
+					<h3>What JavaScript really is?</h3>
+					<img src="lib/javascript-java.jpg" class="fragment current-visible" />
+					<ul>
+						<li class="fragment">object-oriented</li>
+						<li class="fragment">functional</li>
+						<li class="fragment">multi-purpose (browser, server...)</li>
+						<li class="fragment">interpreted</li>
+						<li class="fragment">single-threaded, asynchronous</li>
+						<li class="fragment">loosely-typed, but...</li>
+						<li class="fragment">constantly developed</li>
+						<li class="fragment">THE language of the client-side web</li>
+					</ul>
+				</section>
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+						<aside class="notes">
+							wybor technologii
+							razem z html5, css i js browser api - manipulacja i kontrola GUI na www, mobile, desktopach
+							ECMA - coroczne releasy
+							ES2015/ES6 w zeszlym roku
+							duzo innowacji: silne typowanie, webassembly, wielowątkowość
+							platforma web - coraz wiecej mozliwosc
+							comumnity involves google, microsoft, apple, mozilla
+							dziesiątki bibliotek, frameworków
+
+							jako podsumowanie: wygląda całkiem nieźle i będzie prawdopodobnie wyglądał lepiej
+						</aside>
+						<h3>Why should you learn it?</h3>
+						<ul>
+							<li class="fragment" data-fragment-index="1">extremely useful (client, server, mobile etc.)</li>
+							<li class="fragment" data-fragment-index="2">JSON</li>
+							<li class="fragment" data-fragment-index="3">NoSQL databases</li>
+							<li class="fragment" data-fragment-index="4">has a future</li>
+							<li class="fragment" data-fragment-index="4">constantly growing</li>
+							<li class="fragment" data-fragment-index="4">huge community</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Stackoverflow Developer Survey</h3>
+						<img src="lib/copyingstack.jpg" style="width:40%; height:auto;" class="fragment" />
+					</section>
+	 				<section>
+						<h3>Stackoverflow Developer Survey</h3>
+						<img src="lib/frontend.png" style="width:70%; height:auto;" />
+					</section>
+					<section>
+						<h3>Stackoverflow Developer Survey</h3>
+						<img src="lib/backend.png" style="width:70%; height:auto;" />
+					</section>
+					<section>
+						<h3>Stackoverflow Developer Survey</h3>
+						<img src="lib/fullstack.png" style="width:70%; height:auto;" />
+					</section>
+				</section>
+
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+					<aside class="notes">
+						wplyw tego jak bylo kiedys.
+						amatorzy w js
+						autocomplete srednikow
+						variable scopes
+
+    				</aside>
+						<h3>Back in the days...</h3>
+						<ul>
+							<li class="fragment">built in 10 days</li>
+							<li class="fragment">a toy for web designers?</li>
+							<li class="fragment">awful tools</li>
+							<li class="fragment">design errors</li>
+
+						</ul>
+					</section>
+					<section>
+						<h3>really?</h3>
+<pre class="fragment" data-fragment-index="1"><code data-trim>
+> [] + []
+  ''
+</code></pre>
+<pre class="fragment" data-fragment-index="2"><code data-trim>
+> [] + {}
+  '[object Object]'
+</code></pre>
+<pre class="fragment current-visible" data-fragment-index="3"><code data-trim>
+> {} + []
+</code></pre>
+<pre class="fragment" data-fragment-index="4"><code data-trim>
+> {} + []
+  0
+</code></pre>
+					</section>
+					<section>
+						<aside class="notes">
+						powody?
+						</aside>
+						<img src="lib/questg.jpg" style="width:75%; height:auto;" />
+					</section>
+
+				</section>
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+						<h3>var, let, const?</h3>
+<pre class="fragment"><code data-trim>
+function jsIsStupid() {
+   var one = 1;
+   if (one > 0) {
+      var two = 2;
+      console.log(one); // prints 1
+      console.log(two); // prints 2
+   }
+   console.log(one); // prints 1
+   console.log(two); // prints 2
+}
+</code></pre>
+
+					</section>
+					<section>
+						<h3>var, let, const?</h3>
+<pre><code data-trim>
+function jsIsStupid() {
+   let one = 1;
+   if (one > 0) {
+      let two = 2;
+      console.log(one); // prints 1
+      console.log(two); // prints 2
+   }
+   console.log(one); // prints 1
+   console.log(two); // undefined
+}
+</code></pre>
+					</section>
+					<section>
+						<h3>var, let, const?</h3>
+<pre><code data-trim>
+> const imConstant = 'tryToChangeMe';
+> imConstant = 'trying';
+  Error: Assignment to constant variable.
+</code></pre>
+					</section>
+					<section>
+						<h3>var, let, const?</h3>
+						<blockquote>
+							If a feature is sometimes useful and sometimes dangerous and if there is a better option then always use the better option.
+						</blockquote>
+						<p><small>~ Douglas Crockford, a smart guy</small></p>
+					</section>
+					<section>
+						<img src="lib/makelet.jpg" style="width:40%; height:auto;" />
+					</section>
+				</section>
+
+
+				<section section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+						<h2>Callback</h2><br/>
+							<p style="font-size:45px">vs.</p><br/>
+						<h2>Promise</h2>
+					</section>
+
+					<section>
+						<img style="width:100%; border:none; background:transparent" src="lib/piwko.png" />
+<pre><code>dodajChmiel();
+schładzajBrzeczke();
+dodajDrożdże();
+</code></pre>
+					</section>
+
+					<section>
+						<a style="color:#efc860; font-size:75px">JS </a> is an event driven language<br/><br />
+<pre><code>dodajChmiel(); //it takes the most time
+schładzajBrzeczke();
+dodajDrożdże();
+</code></pre>
+		<aside class="notes">
+			Jeśli wykonanie funkcji dodajChmiel() zajmie więcej czasu niż funckji schładzajBrzeczke(), to rezultat funkcji schładzajBrzeczke() pojawi się przed rezultatem funkcji dodajChmiel();
+		</aside>
+					</section>
+
+					<section>
+						<h2>Solution ?</h2>
+					</section>
+
+					<section>
+						<img style="width:65%; border:none; background:transparent" src="lib/callback.jpg" />
+					</section>
+
+					<section>
+						<i>In computer programming, a <a>callback</a> is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some convenient time.</i>
+					</section>
+
+					<section>
+						<span style="text-decoration: line-through;"><i>In computer programming, a <a>callback</a> is a piece of executable code that is passed as an argument to other code, which is expected to call back (execute) the argument at some convenient time.</i></span><br/><br/>
+
+						Callback functions <a>define the order</a> that different actions occur.
+					</section>
+
+					<section>
+<pre><code>dodajChmiel(); //it takes the most time
+schładzajBrzeczke();
+dodajDrożdże();
+</code></pre>
+<pre><code>function przygotujPiwo(function(callback) {
+  function dodajChmiel(chmiel, function() {
+    function schładzajBrzeczke(temperatura, function() {
+      function dodajDrożdże(drożdze, function() {
+        callback();
+      });
+    });
+  });
+});
+</code></pre>
+<pre><code>function dodajChmiel(chmiel, cb) {
+  //do some stuff here
+  cb();
+}
+</code></pre>
+					</section>
+
+					<section>
+						<p>
+							A <a>callback function</a> is a function which is:
+						</p>
+						<ul class="unordered-list">
+							<li>passed as an argument to another function,</li>
+							<li>is invoked after some kind of event.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>What is wrong with callbacks?</h3>
+					</section>
+
+					<section>
+						<img style="width:65%; border:none; background:transparent" src="lib/callbackinacalback.jpg" />
+					</section>
+
+					<section>
+						<h2>Callback Hell</h2>
+						<img style="width:85%; border:none; background:transparent" src="lib/callback-hell-javascript.png" />
+						<aside class="notes">
+							Chciałem wkleić tutaj przykład z naszego projektu, ale nie zmieściłby się w tej prezentacji ;/
+							Minusy: ciężkie do śledzenia. And it can get much worse.
+						</aside>
+					</section>
+
+					<section>
+<pre><code>function dodajChmiel(chmiel, cb) {
+  //do some stuff here
+  cb();
+}
+</code></pre>
+
+<pre><code>function dodajChmiel(chmiel, cb) {
+  //do some stuff here
+}
+</code></pre>
+					<aside class="notes">
+						Funkcja dodajChmiel się wykona, ale kolejne już nie. Program zakonczy się w momencie wykonania tej funkcji.
+					</aside>
+					</section>
+
+					<section>
+						<img style="width:15%; border:none; background:transparent" src="lib/es6-logo.png" />
+						<h3>Promises</h3>
+					</section>
+
+					<section>
+						<aside class="notes">
+							Promise to proxy dla wartości, która będzie dostępna w momencie, gdy wywołanie zostanie skonczone, a sama wartość uzupełniona. Wtedy mowimy o spełnieniu promise'a.
+						</aside>
+						<i>A <a>promise</a> is a proxy for a value not necessarily known at its creation time.</i>
+					</section>
+
+					<section>
+						<span style="text-decoration: line-through;"><i>A <a>promise</a> is a proxy for a value not necessarily known at its creation time.</i></span><br/><br/>
+
+						Promises give us a way to handle asynchronous processing in a more synchronous fashion.
+					</section>
+
+					<section>
+<pre><code>function dodajChmiel(chmiel, function() {
+  function schładzajBrzeczke(temperatura, function() {
+    callback();
+  });
+});
+</code></pre>
+
+<pre><code>let dodajChmiel = new Promise(resolve => {
+    resolve('dodajChmiel');
+  }),
+  schładzajBrzeczke = new Promise(resolve => {
+    resolve('schładzajBrzeczke');
+  });
+
+dodajChmiel
+  .then(schładzajBrzeczke)
+  .catch(
+    // some code
+  )
+</code></pre>
+<aside class="notes">
+Jak widac po tym przykładzie zwracany promise jest obiektem, który udostępnia nam metodę then(fn: onResolve, fn: onReject), pozwalającą obsłużyć promise w momencie, gdy zostaje on już obsłużony.
+</aside>
+					</section>
+
+					<section>
+						<h2>Demo time!</h2>
+
+						<img style="width:75%; border:none; background:transparent" src="lib/promise.jpg" />
+					</section>
+				</section>
+
+
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<h3>Destructuring Assignment</h3>
+<pre><code data-trim>
+let serverResponse = getBookFromTheServer();
+
+let bookId = serverResponse.bookId;
+let author = serverResponse.author;
+let title = serverResponse.title;
+let publishYear = serverResponse.publishYear;
+...
+</code></pre>
+ 					<a href="https://jsbin.com/nulipu/edit?js,console" target="_blank" class="fragment">example</a>
+				</section>
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+						<h3>Common misconceptions</h3>
+						<ul>
+							<li class="fragment">data encapsulation</li>
+							<li class="fragment">inheritance</li>
+						</ul>
+					</section>
+					<section>
+						<h3>data encapsulation</h3>
+						</code></pre>
+<pre class="fragment" data-fragment-index="1"><code data-trim>
+var Builder = {
+  currentProjectNode: {
+    'prop1': 'value1',
+    'prop2': 'value2'
+  },
+  linkManager: {
+
+  },
+
+  getCurrentProjectNode: function() {return this.currentProjectNode;},
+  setCurrentProjectNode: function(node) {this.currentProjectNode = node;}
+}
+</code></pre>
+					</section>
+						<section>
+						<h3>data encapsulation</h3>
+						</code></pre>
+<pre><code data-trim>
+var Builder = {
+  //private properties
+  _currentProjectNode: {...},
+  _linkManager: {...},
+
+  getCurrentProjectNode: function() {return this._currentProjectNode},
+  setCurrentProjectNode: function(node) {...}
+}
+</code></pre>
+<pre class="fragment"><code data-trim>
+Builder._currentProjectNode.dynamicProp = 'teamId'; //sorry guys
+</code></pre>
+
+					</section>
+					<section>
+						<aside class="notes">
+							w prostych slowach:
+							kiedy funkcja zapamiętuje i dobiera się do składowych
+							nawet wtedy, kiedy jest wywoływana spoza swojego zasięgu leksykalnego
+							funkcja zwracajaca funkcje do uzycia w pozniejszym czasie
+						</aside>
+						<h3>solution - module pattern</h3>
+						</code></pre>
+<pre><code data-trim>
+var Builder = (function() {
+  var currentProjectNode;
+
+  return {
+    getCurrentProjectNode: function() {return currentProjectNode;},
+    setCurrentProjectNode: function(node) {currentProjectNode = node;}
+  }
+})();
+</code></pre>
+						<p class="fragment">Immediately-invoked function expression</p>
+ 						<a href="https://jsbin.com/juxibah/edit?js,console" target="_blank" class="fragment" data-fragment-index="1">example</a>
+					</section>
+					<section>
+						<img src="lib/closurecat.jpg" >
+					</section>
+				</section>
+
+				<section section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+						<img style="width:15%; border:none; background:transparent" src="lib/es6-logo.png" />
+						<h2>Arrow Functions</h2><br/>
+						<code style="font-size:28px">let młodePiwo = (drożdże, chmiel) <a>=></a> drożdże + chmiel;</code>
+					</section>
+
+					<section>
+						<h2>What is new?</h2><br/>
+						<code><a>=></a></code><br/><br/>
+						<p>anonymous</p><br/>
+						<code>this</code><br/><br/>
+						<code><a>function</a></code> / <code><a>return</a></code> / <code>{}</code>
+
+						<aside class="notes">
+							Arrow functions powinny wygladac znjamo osobom ktore sa zaznajomione z CoffeeScriptem. Zcznijmy zatem od poczatku. Pojawia się tutaj nowy syntax, czyli ta strzałka. Arrow functions sa funkcjami anonimowymi oraz zmieniaja sposob binding'u 'this' w funkcji. Uzywajac arrow functions mozemy uniknac wpisywania słowa function, możemy zapomnieć o return'ie oraz o curly bracket'ach.
+						</aside>
+					</section>
+
+					<section>
+						<h2>Demo time!</h2>
+					</section>
+
+					<section>
+						<aside class="notes">
+							Gdzie powinniśmy zatem używać arrow funkcji? W pewnej rozmowie na stackoverflow, uczestniczacy w niej programisci doszli do takich wnioskow:
+						</aside>
+						<ul>
+							<li>Use <a><code>function</code></a> in the global scope,</li></br>
+							<li>Use <a><code>class</code></a> for object constructors,</li></br>
+							<li>Use <a><code>=></code></a> everywhere else.</li>
+						</ul>
+					</section>
+
+					<section>
+						<img style="width:85%; border:none; background:transparent" src="lib/arrowFunctions.png" /><br/><br/>
+					</section>
+
+					<section>
+						<img style="width:15%; border:none; background:transparent" src="lib/es6-logo.png" />
+						<h2>String Templates</h2><br/>
+						<code style="font-size:30px">console.log(`The best beer is: <a>${beer.name}</a>`);</code>
+					</section>
+
+					<section>
+						<h2>Demo time!</h2>
+					</section>
+
+					<section>
+						<ul style="font-size:30px">
+							<aside class="notes">
+								interpolate = wstawiać tekst/interpolować
+							</aside>
+							<li>You can interpolate <a>variables</a> in them</li><br/>
+							<li>You can actually interpolate using <a>any kind of expression</a>, not just variables</li><br/>
+							<li>They can be <strong><a>multi-line</a></strong>. Finally!</li><br/>
+							<li>You can construct <a>raw templates</a> that don’t interpret backslashes</li>
+						</ol>
+					</section>
+
+					<section>
+						<img style="width:15%; border:none; background:transparent" src="lib/es6-logo.png" />
+						<h2>Spread Operator</h2><br/>
+						<code style="font-size:30px">console.log(<a>...</a>['Guiness', 'Paulaner']);</code>
+					</section>
+
+					<section>
+						<h2>Demo time!</h2>
+					</section>
+
+				</section>
+
+
+
+				<section data-background-image="lib/repeatable_pattern_background.jpg">
+					<section>
+					<aside class="notes">
+						malo elastycznosci
+						hierarchia dziedziczenia w końcu nie odpowiada wymaganiom
+						sa scisle powiazane
+						zmiany w klasie bazowej sa odzwierciedlane w dzieciach
+						dziedziczymy wiecej niz potrzebujemy
+						goryl/banan problem
+
+					</aside>
+					<h3>inheritance</h3>
+					<blockquote class="fragment" data-fragment-index="1">
+						"Favor object composition over <b>class</b> inheritance."
+					</blockquote>
+					<p class="fragment" data-fragment-index="1"><small>~ Four Smart Guys</small></p>
+					<br>
+					<p class="fragment" data-fragment-index="2">JavaScript is class-free</p>
+					<p class="fragment" data-fragment-index="3">prototype-based</p>
+					</section>
+
+					<section>
+						<aside class="notes">
+
+							zero klas, zero szkieletow, same obiekty
+							podczas tworzenia - mozna wskazac skad chcemy dziedziczyc
+						</aside>
+						<h3>prototypal inheritance</h3>
+<pre class="fragment"><code data-trim>
+> var programmer = {
+  lang: 'JavaScript',
+  code: function() {console.log(
+    'my name is ' + this.name + ' and i\'m coding in ' + this.lang;
+  )}
+};
+</code></pre>
+<pre class="fragment"><code data-trim>
+> var me = Object.create(programmer);
+> var colleague = Object.create(programmer);
+</code></pre>
+<pre class="fragment"><code data-trim>
+> me.__proto__;
+  Object {lang: "JavaScript", code: function()}
+</code></pre>
+<pre class="fragment"><code data-trim>
+> me.name = 'kamil';
+> colleague.name = 'lukasz';
+</code></pre>
+<pre class="fragment"><code data-trim>
+> me.code();
+  my name is kamil and i'm coding in JavaScript
+</code></pre>
+<pre class="fragment"><code data-trim>
+> colleague.code();
+  my name is lukasz and i'm coding in JavaScript
+</code></pre>
+					</section>
+					<section>
+						<h3>prototypes</h3>
+						<aside class="notes">
+							link tylko przy pobieraniu wartosci
+							dynamiczne
+
+							minusy - brak hermetyzacji
+						</aside>
+						<img src="lib/protodiag.png" style="width:75%; height:auto;"/>
+					</section>
+					<section>
+						<h3>functional inheritance</h3>
+						<aside class="notes">
+							oparty - wzorzec modulu
+						</aside>
+
+<pre class="fragment"><code data-trim>
+var programmer = function(name) {
+  var lang = 'JS';
+  var name = name || 'randomName';
+
+  return {
+    code: function() {
+    console.log(
+      'my name is: ' + name + ' and i\'m coding in '  + lang;
+    )};
+  }
+};
+</code></pre>
+<pre class="fragment"><code data-trim>
+> var me = Object.create(programmer('kamil'));
+> me.lang
+  undefined
+</code></pre>
+<pre class="fragment"><code data-trim>
+> me.code();
+  my name is: kamil and i'm coding in JS
+</code></pre>
+					</section>
+					<section>
+						<aside class="notes">
+							modern js - destructuring, kompozycja, Property Shorthand
+						</aside>
+						<h3>the new way</h3>
+<pre class="fragment current-visible"><code data-trim>
+function Programmer(characteristics) {
+  let {name, surname, langSupport} = characteristics;
+
+  let code = function() {
+    console.log(`my name is ${name} and i\'m coding in ${langSupport}`);
+  }
+
+  let introduceSelf = function() {
+    console.log(`i\'m ${name} ${surname}`)
+  }
+
+  return Object.freeze({
+    code,
+    introduceSelf
+  });
+}
+</code></pre>
+					</section>
+					<section>
+						<aside class="notes">
+							composition over inheritance
+							zwracany obiekt jest nieruszalny
+							brak problemow z this
+						</aside>
+						<h3>the new way</h3>
+<pre><code data-trim>
+let kamilProgramista = Programmer(
+  {name: 'kamil', surname: 'kupczynski', langSupport: 'JS'}
+);
+</code></pre>
+
+<pre class="fragment"><code data-trim>
+> kamilProgramista.code();
+  my name is kamil and i'm coding in JS
+> kamilProgramista.introduceSelf();
+  i'm kamil kupczynski
+</code></pre>
+					</section>
+
+					<section>
+						<h3>summing it up</h3>
+						<ul>
+							<li class="fragment">JavaScript is all about objects</li>
+							<li class="fragment">forget about classes!</li>
+							<li class="fragment">don't try to mimic classes bahaviour in JS</li>
+						</ul>
+					</section>
+					<section>
+						<h3>further reading</h3>
+
+						<ul>
+							<li>Javascript: The Good Parts</li>
+							<li>You Don't Know JS series</li>
+							<li>https://davidwalsh.name/javascript-objects</li>
+						</ul>
+					</section>
+				</section>
+
+
+
+				<section section data-background-image="lib/repeatable_pattern_background.jpg">
+
+					<section>
+						<h4><a>November 18-th, 2016</a> - NodeJS for Dummies</h4><br/>
+
+						<img style="width:8%; border:none; background:transparent" src="lib/square-facebook-512.png" /> Hack.your.Career<br/>
+					</section>
+
+					<section>
+						<img style="width:8%; border:none; background:transparent" src="lib/square-facebook-512.png" /> Hack.your.Career<br/>
+
+						<img style="width:50%; border:none; background:transparent" src="lib/feedback.png" />
+					</section>
+
+					<section>
+						<h1 style="text-transform:none">Thank You !</h1>
+						<div class="authors-footer" style="font-size:30px">
+							<p>Łukasz Przezorski</p>
+							<p>Kamil Kupczynski</p>
+						</div>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
