@@ -78,22 +78,21 @@
             <img class="fragment" src="lib/content-is-like-water.png" style="height: 70%; border:none; box-shadow:none; margin:30px 0 0">
           </section>
           <section>
-            <h2>Składnia CSS</h2>
-            <pre style="box-shadow: none;">
-              <div class="fragment" style="position: relative; display: block; height: 170px;">
-                <code>
-    &lt;div class="tower-of-pisa"&gt;&lt;/div&gt;
-                </code>
-              </div>
-              <div class="fragment" style="position: relative; display: block; height: 170px;">
-                <code>
-    .tower-of-pisa {
-      font-style: italic;
-    }
-                </code>
-                <img src="lib/img-css/tower-of-pisa.png" style="position: absolute; top: 40px; right: 5px; border: 0; background: 0; box-shadow: none;">
-              </div>
-            </pre>
+            <h2>Responsive web design</h2>
+            <h3 class="fragment">Aproaches:</h3>
+            <ul>
+              <li class="fragment">desktop first</li>
+              <li class="fragment">mobile first</li>
+              <li class="fragment">content first</li>
+            </ul>
+          </section>
+          <section>
+            <h2>The Difference Between Responsive and Adaptive Design</h2>
+            <a class="fragment" href="https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/" target="_blank">Example</a>
+          </section>
+          <section>
+            <h2>Screen size???</h2>
+            <img class="fragment" src="lib/img-css/thisisnottheweb.jpg" style="height: 70%; border:none; box-shadow:none; margin:30px 0 0">
           </section>
         </section>
         <section id="crossBrowser" data-background-image="lib/repeatable_pattern_background.png">
@@ -152,7 +151,8 @@ Writing <strong>maintainable</strong> CSS is hard.
           { src: 'plugin/markdown/marked.js' },
           { src: 'plugin/markdown/markdown.js' },
           { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
         ]
       });
     </script>
