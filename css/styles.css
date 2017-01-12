@@ -543,14 +543,6 @@ body {
 }
 
 /* _____ PARAGRAPH _____ */
-.a-paragraph--stand-out {
-  color: #2c3e50;
-  line-height: 3.2rem;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.7rem;
-  font-weight: 300;
-}
-
 .a-paragraph--primary {
   color: #2c3e50;
   line-height: 1.7rem;
@@ -627,15 +619,6 @@ body {
 }
 
 /* _____ TITLE _____ */
-.a-title--stand-out {
-  color: #2980b9;
-  line-height: 4.3rem;
-  margin: 0 0 2.5rem;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 3.6rem;
-  font-weight: 500;
-}
-
 .a-title--primary {
   text-align: center;
   color: #2c3e50;

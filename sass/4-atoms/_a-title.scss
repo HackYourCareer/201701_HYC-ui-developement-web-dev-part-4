@@ -1,12 +1,12 @@
 /* _____ TITLE _____ */
 
 // Component variables
-$a-title--stand-out-text-color: $color-blue-primary;
-$a-title--stand-out-line-height: 4.3rem;
-$a-title--stand-out-margin: 0 0 2.5rem;
-$a-title--stand-out-font-family: $font-ubuntu;
-$a-title--stand-out-font-size: 3.6rem;
-$a-title--stand-out-font-weight: 500;
+// $a-title--stand-out-text-color: $color-blue-primary;
+// $a-title--stand-out-line-height: 4.3rem;
+// $a-title--stand-out-margin: 0 0 2.5rem;
+// $a-title--stand-out-font-family: $font-ubuntu;
+// $a-title--stand-out-font-size: 3.6rem;
+// $a-title--stand-out-font-weight: 500;
 
 $a-title--primary-text-color: $color-blue-dark-primary;
 $a-title--primary-line-height: 4.3rem;
@@ -23,17 +23,6 @@ $a-title--secondary-font-size: 2.4rem;
 $a-title--secondary-font-weight: 400;
 
 .a-title {
-    &--stand-out {
-        color      : $a-title--stand-out-text-color;
-        line-height: $a-title--stand-out-line-height;
-        margin     : $a-title--stand-out-margin;
-        font       : {
-            family: $a-title--stand-out-font-family;
-            size  : $a-title--stand-out-font-size;
-            weight: $a-title--stand-out-font-weight;
-        }
-    }
-
     &--primary {
         text-align : center;
         color      : $a-title--primary-text-color;
