@@ -78,6 +78,18 @@
             <img class="fragment" src="lib/content-is-like-water.png" style="height: 70%; border:none; box-shadow:none; margin:30px 0 0">
           </section>
           <section>
+            <h2>Screen size???</h2>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <img class="fragment fade-in none-out" src="lib/img-css/thisisnottheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+            </span>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <img class="fragment fade-in none-out" src="lib/img-css/thisistheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+            </span>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <img class="fragment fade-in none-out" src="lib/img-css/thiswillbetheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+            </span>
+          </section>
+          <section>
             <h2>Responsive web design</h2>
             <h3 class="fragment">Aproaches:</h3>
             <ul>
@@ -92,15 +104,37 @@
             <a class="fragment" href="https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/" target="_blank">Example</a>
           </section>
           <section>
-            <h2>Screen size???</h2>
+            <h2>What is a Media Query?</h2>
             <span style="position: absolute; width: 100%; left: 0;">
-              <img class="fragment fade-in none-out" src="lib/img-css/thisisnottheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+              <pre class="fragment none-in fade-out">
+                <code>
+<link rel="stylesheet" href="global.css" media="all" />
+<link rel="stylesheet" href="main.css" media="screen" />
+<link rel="stylesheet" href="paper.css" media="print" />
+<link rel="stylesheet" href="mobile.css" media="handheld"/>
+                </code>
+              </pre>
             </span>
             <span style="position: absolute; width: 100%; left: 0;">
-              <img class="fragment fade-in none-out" src="lib/img-css/thisistheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
-            </span>
-            <span style="position: absolute; width: 100%; left: 0;">
-              <img class="fragment fade-in none-out" src="lib/img-css/thiswillbetheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+              <pre class="fragment fade-in none-out">
+                <code>
+@media screen and (max-width: 480px) {
+  .container {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .container {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .container {
+    display: inline-block;
+  }
+}
+                </code>
+              </pre>
             </span>
           </section>
         </section>
