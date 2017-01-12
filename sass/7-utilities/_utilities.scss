@@ -8,57 +8,136 @@
 // }
 //
 
+// TRANSITIONS
+//
+// All
+.u-transition-all {
+    @include transition($transition-default);
+}
+
 // RESPONSIVENESS
 //
 // Responsive image
 .u-responsive-img {
-  width : 100%;
-  height: auto;
+    width : 100%;
+    height: auto;
+}
+
+// DISPLAYING
+//
+// Flex container
+.u-flex-container {
+    @media all and (min-width: $screen-sm) {
+         @include display(flex);
+        @include align-items(stretch);
+        @include justify-content(center);
+    }
+    @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+         @include flex-flow(column nowrap);
+    }
+    @media all and (min-width: $screen-md) {
+         @include flex-flow(row nowrap);
+    }
+
+    &__item {
+        &--small {
+            @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+            @media all and (min-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+        }
+
+        &--medium {
+            @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+            @media all and (min-width: $screen-md) {
+                 @include flex(1 0 50%);
+            }
+        }
+
+        &--large {
+            @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+                 @include flex(1 0 100%);
+            }
+            @media all and (min-width: $screen-md) {
+                 @include flex-grow(1);
+            }
+        }
+    }
+}
+
+// Column system
+.u-columns {
+    @include column-gap(0);
+
+    & * {
+        -webkit-column-break-inside: avoid;
+        page-break-inside          : avoid;
+        break-inside               : avoid;
+    }
+    @media all and (max-width: $screen-xs) {
+         @include columns(20em 1);
+    }
+    @media all and (min-width: $screen-xs) and (max-width: $screen-sm) {
+         @include columns(20em 2);
+    }
+    @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+         @include columns(20em 3);
+    }
+    @media all and (min-width: $screen-md) and (max-width: $screen-lg) {
+         @include columns(20em 4);
+    }
+    @media all and (min-width: $screen-lg) {
+         @include columns(20em 4);
+    }
 }
 
 // Hidden (with different responsive breakpoints)
 .u-hidden {
-  &--xs {
-    @media all and (max-width: $screen-xs) {
-      display: none;
+    &--xs {
+        @media all and (max-width: $screen-xs) {
+            display: none;
+        }
     }
-  }
 
-  &--sm {
-    @media all and (min-width: $screen-xs) and (max-width: $screen-sm) {
-      display: none;
+    &--sm {
+        @media all and (min-width: $screen-xs) and (max-width: $screen-sm) {
+            display: none;
+        }
     }
-  }
 
-  &--md {
-    @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
-      display: none;
+    &--md {
+        @media all and (min-width: $screen-sm) and (max-width: $screen-md) {
+            display: none;
+        }
     }
-  }
 
-  &--lg {
-    @media all and (min-width: $screen-md) and (max-width: $screen-lg) {
-      display: none;
+    &--lg {
+        @media all and (min-width: $screen-md) and (max-width: $screen-lg) {
+            display: none;
+        }
     }
-  }
 
-  &--xl {
-    @media all and (min-width: $screen-lg) {
-      display: none;
+    &--xl {
+        @media all and (min-width: $screen-lg) {
+            display: none;
+        }
     }
-  }
 }
 
 // JUMP TARGET
 $u-jump-target-height: 10rem;
 
 .u-jump-target {
-  &::before {
-    content: '';
-    display: block;
-    height : $u-jump-target-height;
-    /* fixed header height*/
-    margin : -$u-jump-target-height 0 0;
-    /* negative fixed header height */
-  }
+    &::before {
+        content: '';
+        display: block;
+        height : $u-jump-target-height;
+        /* fixed header height*/
+        margin : -$u-jump-target-height 0 0;
+        /* negative fixed header height */
+    }
 }

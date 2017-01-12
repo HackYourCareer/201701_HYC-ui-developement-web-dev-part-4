@@ -1,0 +1,223 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Web Development</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <img style="width:60%; border:none; background:transparent" src="lib/sap-hybris-logo.png" /><br/><br/>
+            <center>
+              <h3>Hack Your Career</h3><br/>
+              <img style="width:8%; border:none; background:transparent" src="lib/square-facebook-512.png" /> <a style="color:#3b5998">Hack.your.Career</a>
+            </center>
+          </section>
+          <section>
+            <img style="width:10%; box-shadow:none; border:none; background:transparent; margin:2%" src="lib/html5.png" />
+            <img style="width:7%; box-shadow:none; border:none; background:transparent; margin:2%" src="lib/css3.png" />
+            <br/><br/><br/>
+            <h3 style="text-transform: none">Web Dev. part 4/4</h3>
+            <h3 style="text-transform: none">UI Development Vol.2</h3>
+            <div class="authors-footer" style="position: absolute; right: 0; bottom: -50%;">
+              <p>Alan Hadyk (<a href="mailto:alan.hadyk@sap.com" title="alan.hadyk@sap.com">alan.hadyk@sap.com</a>)</p>
+              <p>Ivijan Hadija (<a href="mailto:ivijan.hadija@sap.com" title="ivijan.hadija@sap.com">ivijan.hadija@sap.com</a>)</p>
+            </div>
+          </section>
+          <section>
+            <h3 style="text-transform: none">Ogłoszenia parafialne</h3><br/><br/>
+            <ul>
+              <li class="fragment">Owoce i soki</li>
+              <li class="fragment">Wykłady częściowo w jęz. angielskim</li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="text-transform: none">Agenda</h3><br/><br/>
+            <ul>
+              <li class="fragment"><a href="#rwd">RWD & media queries</a></li>
+              <li class="fragment"><a href="#crossBrowser">Cross-browser compatibility</a></li>
+              <li class="fragment"><a href="#bem">BEM</a></li>
+              <li class="fragment"><a href="#liveCoding">Live coding!</a></li>
+              <li class="fragment"><a href="#qa">Q&A</a></li>
+            </ul>
+          </section>
+          <section>
+            <h3 style="text-transform: none">Co zyskacie dzięki dzisiejszemu wykładowi?</h3><br/><br/>
+            <ul>
+              <li class="fragment">wiedzę dotyczącą tworzenia stron internetowych dla różnych rozmiarów ekranów i przeglądarek</li>
+              <li class="fragment">praktyczną wiedzę dotyczącą realnego wdrażania projektów i tworzenia interfejsów użytkownika</li>
+              <li class="fragment">inspirację i motywację do dalszej nauki</li>
+            </ul>
+          </section>
+        </section>
+        <section id="rwd" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <img style="width:20%; border:none; box-shadow:none; margin:0 0 50px" src="lib/media-queries.png" />
+            <h2>RWD & media queries</h2>
+          </section>
+          <section>
+            <h2>Content is like water</h2>
+            <img class="fragment" src="lib/content-is-like-water.png" style="height: 70%; border:none; box-shadow:none; margin:30px 0 0">
+          </section>
+          <section>
+            <h2>Screen size???</h2>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <img class="fragment fade-in none-out" src="lib/img-css/thisisnottheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+            </span>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <img class="fragment fade-in none-out" src="lib/img-css/thisistheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+            </span>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <img class="fragment fade-in none-out" src="lib/img-css/thiswillbetheweb.png" style="height: 70%; border:none; box-shadow:none; margin: 30px 0 0">
+            </span>
+          </section>
+          <section>
+            <h2>Responsive web design</h2>
+            <h3 class="fragment">Aproaches:</h3>
+            <ul>
+              <li class="fragment">desktop first</li>
+              <li class="fragment">mobile first</li>
+              <li class="fragment">content first</li>
+            </ul>
+          </section>
+          <section>
+            <h2>The Difference Between <br>RWD & AWD</h2>
+            <img class="fragment" src="lib/rwd-vs-adapt-example.gif" style="height: 60%; border:none; box-shadow:none; margin:20px 0">
+            <a class="fragment" href="https://css-tricks.com/the-difference-between-responsive-and-adaptive-design/" target="_blank">Example</a>
+          </section>
+          <section>
+            <h2>What is a Media Query?</h2>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <pre class="fragment none-in fade-out">
+                <code>
+<link rel="stylesheet" href="global.css" media="all" />
+<link rel="stylesheet" href="main.css" media="screen" />
+<link rel="stylesheet" href="paper.css" media="print" />
+<link rel="stylesheet" href="mobile.css" media="handheld"/>
+                </code>
+              </pre>
+            </span>
+            <span style="position: absolute; width: 100%; left: 0;">
+              <pre class="fragment fade-in none-out">
+                <code>
+@media screen and (max-width: 480px) {
+  .container {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) and (orientation: portrait) {
+  .container {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) and (orientation: landscape) {
+  .container {
+    display: inline-block;
+  }
+}
+                </code>
+              </pre>
+            </span>
+          </section>
+        </section>
+        <section id="crossBrowser" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <img style="width:480px; border:none; box-shadow:none; margin:0 0 50px" src="lib/browsers.png" />
+            <h2>Cross-browser compatibility</h2>
+          </section>
+          <section>
+            <h2>Dlaczego Sass?</h2>
+            <div class="fragment" style="margin-top:100px;">
+              <blockquote style="font-size: 60px;">
+Writing CSS is easy.<br>
+Writing <strong>maintainable</strong> CSS is hard.
+              </blockquote>
+              <img style="width:30%; border:none; box-shadow:none; margin:50px 0 0" src="lib/img-css/sass-glasses.svg" />
+            </div>
+          </section>
+        </section>
+        <section id="bem" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <img style="width:30%; border:none; box-shadow:none; margin:0 0 50px" src="lib/bem.svg" />
+            <h2>BEM</h2>
+          </section>
+          <section>
+            <h2>O co chodzi?</h2>
+            <ul>
+              <li class="fragment">BEM jest konwencją nazewnictwa klas</li>
+              <li class="fragment">Sprawia, że struktura kodu jest przejrzysta i łatwa do zrozumienia</li>
+              <li class="fragment">Doskonale współgra z metodologią Atomic Design</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Block, element, modifier</h2>
+            <img class="fragment" src="lib/bem-explained.png" style="width:100%; border:none; box-shadow:none; margin:30px 0 0">
+          </section>
+          <section>
+            <h2>Przykłady</h2>
+            <ul>
+              <li class="fragment">.<span style="color:#0457d3;">m</span>-<span style="color:#c604d2;">navigation</span>__<span style="color:#d20404;">item</span>--<span style="color:#007a06;">large</span></li>
+              <li class="fragment">.<span style="color:#0457d3;">a</span>-<span style="color:#c604d2;">button</span>--<span style="color:#007a06;">primary</span></li>
+              <li class="fragment">.<span style="color:#0457d3;">o</span>-<span style="color:#c604d2;">header</span>__<span style="color:#d20404;">logo</span>--<span style="color:#007a06;">align-left</span></li>
+            </ul>
+          </section>
+        </section>
+        <section id="liveCoding" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <h2>Live coding!</h2>
+          </section>
+        </section>
+        <section id="qa" data-background-image="lib/repeatable_pattern_background.png">
+          <section>
+            <h2>We're done!</h2>
+            <img src="lib/videos/mind-blown3.gif" style="border:none; box-shadow:none; width:100%; margin:25px 0 0;">
+          </section>
+          <section>
+            <h2>Q&A</h2>
+          </section>
+          <section>
+            <h2>Ankieta</h2>
+            <img src="lib/feedback.jpg" style="border:none; box-shadow:none; height:80%; margin:25px 0 0;">
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+        ]
+      });
+    </script>
+  </body>
+</html>

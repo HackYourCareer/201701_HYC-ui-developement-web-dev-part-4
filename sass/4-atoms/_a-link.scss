@@ -1,0 +1,71 @@
+/* _____ LINKS _____ */
+
+// Component variables
+$a-link-transition: $transition-default;
+
+$a-link--primary-perspective: 100rem;
+$a-link--primary-perspective-origin: 50% 50%;
+
+$a-link__subelement--primary-text-color: $color-red-primary;
+$a-link__subelement--primary-padding: 0 .5em;
+$a-link__subelement--primary-transform-origin: 50% 0;
+$a-link__subelement--primary-hover-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+$a-link__subelement--primary-before-background: $color-red-primary;
+$a-link__subelement--primary-before-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+
+.a-link {
+    cursor         : pointer;
+    text-decoration: none;
+    transition     : $a-link-transition !important;
+
+    & * {
+        transition: $a-link-transition !important;
+    }
+
+    &--primary {
+        display : inline-block;
+        overflow: hidden;
+        @include perspective($a-link--primary-perspective);
+        @include perspective-origin($a-link--primary-perspective-origin);
+
+        &:active,
+        &:focus,
+        &:hover {
+            .a-link__subelement--primary {
+                @include transform($a-link__subelement--primary-hover-transform);
+
+                &::before {
+                    background: $a-link__subelement--primary-before-background;
+                    color     : #fff;
+                }
+            }
+        }
+    }
+
+    &__subelement {
+        &--primary {
+            color   : $a-link__subelement--primary-text-color;
+            position: relative;
+            display : block;
+            padding : $a-link__subelement--primary-padding;
+            @include transform-origin($a-link__subelement--primary-transform-origin);
+            @include transform-style(preserve-3d);
+
+            &::before {
+                width  : 100%;
+                height : 100%;
+                content: attr(data-hover);
+                padding: $a-link__subelement--primary-padding;
+                @include transform-origin($a-link__subelement--primary-transform-origin);
+                @include transform($a-link__subelement--primary-before-transform);
+                @include position(absolute, 0, initial, initial, 0);
+            }
+        }
+    }
+
+    &:active,
+    &:focus,
+    &:hover {
+        text-decoration: none;
+    }
+}

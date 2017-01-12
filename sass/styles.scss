@@ -23,12 +23,22 @@
   Atoms are basic tags, such as form labels, inputs or buttons. Atoms are abstract; they provide a useful reference and allow you to see all your global styles laid out at a glance.
  */
 @import '4-atoms/a-btn';
+@import '4-atoms/a-checkbox';
+@import '4-atoms/a-input';
+@import '4-atoms/a-label';
+@import '4-atoms/a-link';
+@import '4-atoms/a-loader';
+@import '4-atoms/a-paragraph';
+@import '4-atoms/a-title';
 
 // Molecules
 /*
   Molecules are groups of elements that function together as a unit. For example, a form label, search input, and button atom
   can combine them together to form a search form molecule.
  */
+@import '5-molecules/m-filter';
+@import '5-molecules/m-item';
+@import '5-molecules/m-items-container';
 @import '5-molecules/m-navigation';
 
 // Organisms

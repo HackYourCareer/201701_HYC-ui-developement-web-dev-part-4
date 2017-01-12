@@ -12,9 +12,20 @@ $a-btn--primary-background-hover: $color-red-primary;
 $a-btn--primary-box-shadow-hover: $box-shadow-primary;
 $a-btn--primary-top-hover: -0.3125rem;
 
+$a-btn--secondary-text-color: $color-white-primary;
+$a-btn--secondary-background: $color-red-primary;
+$a-btn--secondary-font-weight: 400;
+$a-btn--secondary-font-family: $font-cabin;
+$a-btn--secondary-box-shadow-hover: $box-shadow-primary;
+$a-btn--secondary-top-hover: -0.3125rem;
+
 $a-btn--lg-font-size: 2.7rem;
 $a-btn--lg-padding: 0 3rem;
 $a-btn--lg-height: 5rem;
+
+$a-btn--sm-font-size: 1.8rem;
+$a-btn--sm-padding: 0 3.75rem;
+$a-btn--sm-height: 3.75rem;
 
 .a-btn {
     cursor         : pointer;
@@ -52,11 +63,66 @@ $a-btn--lg-height: 5rem;
         }
     }
 
+    &--secondary {
+        color     : $a-btn--secondary-text-color;
+        background: $a-btn--secondary-background;
+        position  : relative;
+        top       : 0;
+        font      : {
+            weight: $a-btn--secondary-font-weight;
+            family: $a-btn--secondary-font-family;
+        }
+        @include flex-container-inline(center, center, row, nowrap);
+
+        &:hover {
+            box-shadow: $a-btn--secondary-box-shadow-hover;
+            top       : $a-btn--secondary-top-hover;
+        }
+
+        &:active,
+        &:focus {
+            box-shadow: none;
+            top       : 0;
+        }
+    }
+
+    &--tertiary {
+        background: none;
+        border    : none;
+
+        .a-btn__icon--active {
+            display: none;
+        }
+
+        .a-btn__icon--inactive {
+            display: block;
+        }
+
+        &.a-btn--is-muted,
+        &.a-btn--is-playing {
+            .a-btn__icon--active {
+                display: block;
+            }
+
+            .a-btn__icon--inactive {
+                display: none;
+            }
+        }
+    }
+
     &--lg {
         padding: $a-btn--lg-padding;
         height : $a-btn--lg-height;
         font   : {
             size: $a-btn--lg-font-size;
+        }
+    }
+
+    &--sm {
+        padding: $a-btn--sm-padding;
+        height : $a-btn--sm-height;
+        font   : {
+            size: $a-btn--sm-font-size;
         }
     }
 
