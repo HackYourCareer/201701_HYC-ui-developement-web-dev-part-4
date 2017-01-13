@@ -133,7 +133,8 @@ $u-jump-target-height: 10rem;
 
 .u-jump-target {
     &::before {
-        content: '';
+        // undo later
+        //content: '';
         display: block;
         height : $u-jump-target-height;
         /* fixed header height*/

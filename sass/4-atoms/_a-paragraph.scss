@@ -7,34 +7,13 @@ $a-paragraph--stand-out-font-family: $font-ubuntu;
 $a-paragraph--stand-out-font-size: 2.7rem;
 $a-paragraph--stand-out-font-weight: 300;
 
-$a-paragraph--primary-text-color: $color-blue-dark-primary;
-$a-paragraph--primary-line-height: 1.7rem;
-$a-paragraph--primary-margin: 0;
-$a-paragraph--primary-font-family: $font-cabin;
-$a-paragraph--primary-font-size: 1.4rem;
-$a-paragraph--primary-font-weight: 400;
-
-$a-paragraph--secondary-text-color: $color-white-primary;
-$a-paragraph--secondary-line-height: 125%;
-$a-paragraph--secondary-margin: 0 0 1.875rem;
-$a-paragraph--secondary-font-family: $font-ubuntu;
-$a-paragraph--secondary-font-size: 2.4rem;
-$a-paragraph--secondary-font-weight: 400;
-
-$a-paragraph--tertiary-text-color: rgba($color-blue-dark-primary, 0.75);
+$a-paragraph--tertiary-text-color: rgba($color-blue-dark-primary, 0.75);    //rgba(44, 62, 80, 0.75)
 $a-paragraph--tertiary-line-height: 100%;
 $a-paragraph--tertiary-margin: 0 0 1.25rem;
+$a-paragraph--tertiary-text-transform: capitalize;
 $a-paragraph--tertiary-font-family: $font-cabin;
 $a-paragraph--tertiary-font-size: 1.4rem;
 $a-paragraph--tertiary-font-weight: 400;
-
-$a-paragraph--watermark-text-color: rgba($color-blue-dark-primary, 0.25);
-$a-paragraph--watermark-line-height: 140%;
-$a-paragraph--watermark-margin: 0;
-$a-paragraph--watermark-padding: 5rem;
-$a-paragraph--watermark-font-family: $font-cabin;
-$a-paragraph--watermark-font-size: 5rem;
-$a-paragraph--watermark-font-weight: 400;
 
 $a-paragraph--blend-text-color: rgba($color-blue-dark-primary, 0.5);
 $a-paragraph--blend-line-height: 140%;
@@ -44,7 +23,45 @@ $a-paragraph--blend-font-family: $font-cabin;
 $a-paragraph--blend-font-size: 1.6rem;
 $a-paragraph--blend-font-weight: 400;
 
+$a-paragraph--primary-text-color: $color-blue-dark-primary;                     //#2c3e50
+$a-paragraph--primary-line-height: 1.7rem;
+$a-paragraph--primary-margin: 0;
+$a-paragraph--primary-font-family: $font-cabin;
+$a-paragraph--primary-font-size: 1.4rem;
+$a-paragraph--primary-font-weight: 400;
+
+$a-paragraph--secondary-text-color: $color-white-primary;                       //#ecf0f1
+$a-paragraph--secondary-line-height: 125%;
+$a-paragraph--secondary-margin: 0 0 1.875rem;
+$a-paragraph--secondary-font-family: $font-ubuntu;
+$a-paragraph--secondary-font-size: 2.4rem;
+$a-paragraph--secondary-font-weight: 400;
+
+$a-paragraph--watermark-text-color: rgba($color-blue-dark-primary, 0.25);     //rgba(44, 62, 80, 0.25)
+$a-paragraph--watermark-line-height: 140%;
+$a-paragraph--watermark-margin: 0;
+$a-paragraph--watermark-padding: 5rem;
+$a-paragraph--watermark-text-align : center;
+$a-paragraph--watermark-font-family: $font-cabin;
+$a-paragraph--watermark-font-size: 5rem;
+$a-paragraph--watermark-font-weight: 400;
+
 .a-paragraph {
+
+    &--primary {
+        //...
+    }
+
+    &--secondary {
+        //...
+    }
+
+    &--watermark {
+        //...
+        //@include flex-container();
+        //@include column-span(all);
+    }
+
     &--stand-out {
         color      : $a-paragraph--stand-out-text-color;
         line-height: $a-paragraph--stand-out-line-height;
@@ -55,53 +72,8 @@ $a-paragraph--blend-font-weight: 400;
         }
     }
 
-    &--primary {
-        color      : $a-paragraph--primary-text-color;
-        line-height: $a-paragraph--primary-line-height;
-        margin     : $a-paragraph--primary-margin;
-        font       : {
-            family: $a-paragraph--primary-font-family;
-            size  : $a-paragraph--primary-font-size;
-            weight: $a-paragraph--primary-font-weight;
-        }
-    }
-
-    &--secondary {
-        color      : $a-paragraph--secondary-text-color;
-        line-height: $a-paragraph--secondary-line-height;
-        margin     : $a-paragraph--secondary-margin;
-        font       : {
-            family: $a-paragraph--secondary-font-family;
-            size  : $a-paragraph--secondary-font-size;
-            weight: $a-paragraph--secondary-font-weight;
-        }
-    }
-
     &--tertiary {
-        color         : $a-paragraph--tertiary-text-color;
-        line-height   : $a-paragraph--tertiary-line-height;
-        margin        : $a-paragraph--tertiary-margin;
-        text-transform: capitalize;
-        font          : {
-            family: $a-paragraph--tertiary-font-family;
-            size  : $a-paragraph--tertiary-font-size;
-            weight: $a-paragraph--tertiary-font-weight;
-        }
-    }
-
-    &--watermark {
-        color      : $a-paragraph--watermark-text-color;
-        line-height: $a-paragraph--watermark-line-height;
-        margin     : $a-paragraph--watermark-margin;
-        padding    : $a-paragraph--watermark-padding;
-        text-align : center;
-        font       : {
-            family: $a-paragraph--watermark-font-family;
-            size  : $a-paragraph--watermark-font-size;
-            weight: $a-paragraph--watermark-font-weight;
-        }
-        @include flex-container();
-        @include column-span(all);
+        //...
     }
 
     &--blend {

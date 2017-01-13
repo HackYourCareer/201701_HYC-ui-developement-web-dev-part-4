@@ -1,23 +1,16 @@
 /* _____ FILTER _____ */
 
 // Component variables
-$m-filter-background: $color-blue-light-primary;
+$m-filter-background: $color-blue-light-primary;        //#3498db
 $m-filter-padding: 2.5rem;
 
 $m-filter__checkbox-container-margin: 0 0 0 2.5rem;
 
 $m-filter__btn-container-margin: 1.25rem 0 0;
-
+$m-filter__btn-container-text-align: center;
 .m-filter {
-    background: $m-filter-background;
-    padding   : $m-filter-padding;
+    //...
 
-    &__checkbox-container {
-        margin: $m-filter__checkbox-container-margin;
-    }
-
-    &__btn-container {
-        text-align: center;
-        margin    : $m-filter__btn-container-margin;
-    }
+    //&__checkbox-container
+    //&__btn-container
 }

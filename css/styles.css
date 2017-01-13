@@ -163,47 +163,6 @@ body {
   top: 0;
 }
 
-.a-btn--secondary {
-  color: #ecf0f1;
-  background: #e74c3c;
-  position: relative;
-  top: 0;
-  font-weight: 400;
-  font-family: "Cabin", sans-serif;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-flex-flow: row nowrap;
-  -moz-flex-flow: row nowrap;
-  flex-flow: row nowrap;
-}
-
-.a-btn--secondary:hover {
-  box-shadow: 0 0.6rem 0.9rem 0 rgba(44, 62, 80, 0.33);
-  top: -0.3125rem;
-}
-
-.a-btn--secondary:active, .a-btn--secondary:focus {
-  box-shadow: none;
-  top: 0;
-}
-
 .a-btn--tertiary {
   background: none;
   border: none;
@@ -323,54 +282,6 @@ body {
   text-overflow: ellipsis;
 }
 
-.a-input--primary {
-  color: #2980b9;
-  background: #ecf0f1 url("../img/icons/search.svg") no-repeat 1.25rem center;
-  transition: all 300ms ease-in-out;
-  margin: 0 0 2.5rem;
-  padding: 0 2.5rem 0 5rem;
-  height: 5rem;
-  border: none;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 300;
-}
-
-.a-input--primary::-webkit-input-placeholder {
-  color: #2980b9;
-  opacity: 1;
-}
-
-.a-input--primary:-moz-placeholder {
-  color: #2980b9;
-  opacity: 1;
-}
-
-.a-input--primary::-moz-placeholder {
-  color: #2980b9;
-  opacity: 1;
-}
-
-.a-input--primary:-ms-input-placeholder {
-  color: #2980b9;
-  opacity: 1;
-}
-
-.a-input--primary::-ms-placeholder {
-  color: #2980b9;
-  opacity: 1;
-}
-
-.a-input--primary::placeholder {
-  color: #2980b9;
-  opacity: 1;
-}
-
-.a-input--primary:active, .a-input--primary:focus {
-  box-shadow: 0 0.6rem 0.9rem 0 rgba(44, 62, 80, 0.33);
-  background-color: #fff;
-}
-
 .a-input--secondary {
   color: #2980b9;
   background: #fff;
@@ -420,38 +331,6 @@ body {
 }
 
 /* _____ LABELS _____ */
-.a-label--primary {
-  color: #ecf0f1;
-  height: 1.4rem;
-  margin: 0 1.25rem 1.25rem 0;
-  cursor: pointer;
-  font-weight: 300;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 1.8rem;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
 /* _____ LINKS _____ */
 .a-link {
   cursor: pointer;
@@ -487,27 +366,9 @@ body {
   color: #fff;
 }
 
-.a-link__subelement--primary {
-  color: #e74c3c;
-  position: relative;
-  display: block;
-  padding: 0 0.5em;
-  -webkit-transform-origin: 50% 0;
-  -moz-transform-origin: 50% 0;
-  -ms-transform-origin: 50% 0;
-  -o-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
 .a-link__subelement--primary::before {
   width: 100%;
   height: 100%;
-  content: attr(data-hover);
   padding: 0 0.5em;
   -webkit-transform-origin: 50% 0;
   -moz-transform-origin: 50% 0;
@@ -531,17 +392,6 @@ body {
 }
 
 /* _____ LOADER _____ */
-.a-loader {
-  background: #ecf0f1 url("../img/loaders/loader--secondary.svg") center center no-repeat;
-  transition: all 300ms ease-in-out;
-  z-index: 500;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
 .a-loader--is-invisible {
   opacity: 0;
   visibility: hidden;
@@ -554,70 +404,6 @@ body {
   font-family: "Ubuntu", sans-serif;
   font-size: 2.7rem;
   font-weight: 300;
-}
-
-.a-paragraph--primary {
-  color: #2c3e50;
-  line-height: 1.7rem;
-  margin: 0;
-  font-family: "Cabin", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-
-.a-paragraph--secondary {
-  color: #ecf0f1;
-  line-height: 125%;
-  margin: 0 0 1.875rem;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 2.4rem;
-  font-weight: 400;
-}
-
-.a-paragraph--tertiary {
-  color: rgba(44, 62, 80, 0.75);
-  line-height: 100%;
-  margin: 0 0 1.25rem;
-  text-transform: capitalize;
-  font-family: "Cabin", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-}
-
-.a-paragraph--watermark {
-  color: rgba(44, 62, 80, 0.25);
-  line-height: 140%;
-  margin: 0;
-  padding: 5rem;
-  text-align: center;
-  font-family: "Cabin", sans-serif;
-  font-size: 5rem;
-  font-weight: 400;
-  display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-flex-flow: row wrap;
-  -moz-flex-flow: row wrap;
-  flex-flow: row wrap;
-  -webkit-column-span: all;
-  -moz-column-span: all;
-  column-span: all;
 }
 
 .a-paragraph--blend {
@@ -710,16 +496,6 @@ body {
   color: #2980b9;
   line-height: 4.3rem;
   margin: 0 0 2.5rem;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 3.6rem;
-  font-weight: 500;
-}
-
-.a-title--primary {
-  text-align: center;
-  color: #2c3e50;
-  line-height: 4.3rem;
-  margin: 5rem 0 2.5rem;
   font-family: "Ubuntu", sans-serif;
   font-size: 3.6rem;
   font-weight: 500;
@@ -831,20 +607,6 @@ body {
 }
 
 /* _____ FILTER _____ */
-.m-filter {
-  background: #3498db;
-  padding: 2.5rem;
-}
-
-.m-filter__checkbox-container {
-  margin: 0 0 0 2.5rem;
-}
-
-.m-filter__btn-container {
-  text-align: center;
-  margin: 1.25rem 0 0;
-}
-
 /* _____ FORMS _____ */
 .m-form {
   max-width: 108rem;
@@ -1367,7 +1129,6 @@ body {
 }
 
 .u-jump-target::before {
-  content: '';
   display: block;
   height: 10rem;
   /* fixed header height*/
